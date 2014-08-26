@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  BUItemListViewController.h
 //  braindu-coredata
 //
 //  Created by Steven Schofield on 26/08/2014.
@@ -7,14 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CoreDataStack.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
-
-
+@interface BUItemListViewController : UITableViewController
 
 @end
-

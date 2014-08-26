@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  BUNewChartViewController.h
 //  braindu-coredata
 //
 //  Created by Steven Schofield on 26/08/2014.
@@ -7,14 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CoreDataStack.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@class BUChart;
 
 
+@interface BUChartViewController : UIViewController
 
+@property (strong, nonatomic) BUChart *chart;
 
 @end
-

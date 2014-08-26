@@ -1,4 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6172.12" systemVersion="13E28" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="BUChart" representedClassName="BUChart" syncable="YES">
+        <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageData" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" storedInTruthFile="YES" syncable="YES"/>
+        <attribute name="is_public" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BUItem" inverseName="chart" inverseEntity="BUItem" syncable="YES"/>
+    </entity>
+    <entity name="BUItem" representedClassName="BUItem" syncable="YES">
+        <attribute name="coordx" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="coordy" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="imageData" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="chart" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BUChart" inverseName="items" inverseEntity="BUChart" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="BUChart" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="BUItem" positionX="187" positionY="99" width="128" height="148"/>
+    </elements>
 </model>

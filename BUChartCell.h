@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  BUChartCell.h
 //  braindu-coredata
 //
 //  Created by Steven Schofield on 26/08/2014.
@@ -7,14 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CoreDataStack.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@class BUChart;
 
-@property (strong, nonatomic) UIWindow *window;
+@interface BUChartCell : UITableViewCell
 
-
-
+- (void)configureCellForChart:(BUChart *)chart;
 
 @end
-

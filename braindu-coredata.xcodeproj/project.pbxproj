@@ -7,11 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C32854319AD3B41004A8BBD /* BUItemListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C32854219AD3B41004A8BBD /* BUItemListViewController.m */; };
+		0C32854619AD4840004A8BBD /* BUItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C32854519AD4840004A8BBD /* BUItemViewController.m */; };
+		0C32854C19AD4E37004A8BBD /* BUChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C32854B19AD4E37004A8BBD /* BUChart.m */; };
+		0C39751E19AC99BE009F6FDF /* BUChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C39751D19AC99BE009F6FDF /* BUChartViewController.m */; };
+		0C39752519ACBDDE009F6FDF /* BUChartListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C39752419ACBDDE009F6FDF /* BUChartListTableViewController.m */; };
+		0C39752B19ACE16A009F6FDF /* BUChartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C39752A19ACE16A009F6FDF /* BUChartCell.m */; };
+		0C39753419AD34E4009F6FDF /* BUItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C39753319AD34E4009F6FDF /* BUItem.m */; };
 		0C61D9B319AC8E5000623247 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C61D9B219AC8E5000623247 /* main.m */; };
 		0C61D9B619AC8E5000623247 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C61D9B519AC8E5000623247 /* AppDelegate.m */; };
 		0C61D9B919AC8E5000623247 /* braindu_coredata.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C61D9B719AC8E5000623247 /* braindu_coredata.xcdatamodeld */; };
 		0C61D9BB19AC8E5000623247 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C61D9BA19AC8E5000623247 /* Images.xcassets */; };
 		0C61D9C719AC8E5000623247 /* braindu_coredataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C61D9C619AC8E5000623247 /* braindu_coredataTests.m */; };
+		0C61D9D119AC8E6300623247 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C61D9D019AC8E6300623247 /* CoreData.framework */; };
+		0C61D9D419AC905400623247 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C61D9D319AC905400623247 /* CoreDataStack.m */; };
+		0C61D9DA19AC965A00623247 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C61D9D919AC965A00623247 /* MainStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +35,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C32854119AD3B41004A8BBD /* BUItemListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUItemListViewController.h; sourceTree = "<group>"; };
+		0C32854219AD3B41004A8BBD /* BUItemListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUItemListViewController.m; sourceTree = "<group>"; };
+		0C32854419AD4840004A8BBD /* BUItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUItemViewController.h; sourceTree = "<group>"; };
+		0C32854519AD4840004A8BBD /* BUItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUItemViewController.m; sourceTree = "<group>"; };
+		0C32854A19AD4E37004A8BBD /* BUChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BUChart.h; path = ../BUChart.h; sourceTree = "<group>"; };
+		0C32854B19AD4E37004A8BBD /* BUChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BUChart.m; path = ../BUChart.m; sourceTree = "<group>"; };
+		0C39751C19AC99BE009F6FDF /* BUChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUChartViewController.h; sourceTree = "<group>"; };
+		0C39751D19AC99BE009F6FDF /* BUChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUChartViewController.m; sourceTree = "<group>"; };
+		0C39752319ACBDDE009F6FDF /* BUChartListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUChartListTableViewController.h; sourceTree = "<group>"; };
+		0C39752419ACBDDE009F6FDF /* BUChartListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUChartListTableViewController.m; sourceTree = "<group>"; };
+		0C39752619ACDD64009F6FDF /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		0C39752719ACDD64009F6FDF /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		0C39752919ACE16A009F6FDF /* BUChartCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUChartCell.h; sourceTree = "<group>"; };
+		0C39752A19ACE16A009F6FDF /* BUChartCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUChartCell.m; sourceTree = "<group>"; };
+		0C39753219AD34E4009F6FDF /* BUItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BUItem.h; path = ../BUItem.h; sourceTree = "<group>"; };
+		0C39753319AD34E4009F6FDF /* BUItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BUItem.m; path = ../BUItem.m; sourceTree = "<group>"; };
 		0C61D9AD19AC8E5000623247 /* braindu-coredata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "braindu-coredata.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C61D9B119AC8E5000623247 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C61D9B219AC8E5000623247 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -35,6 +61,10 @@
 		0C61D9C019AC8E5000623247 /* braindu-coredataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "braindu-coredataTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C61D9C519AC8E5000623247 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C61D9C619AC8E5000623247 /* braindu_coredataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = braindu_coredataTests.m; sourceTree = "<group>"; };
+		0C61D9D019AC8E6300623247 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		0C61D9D219AC905400623247 /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
+		0C61D9D319AC905400623247 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
+		0C61D9D919AC965A00623247 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C61D9D119AC8E6300623247 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,9 +86,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C39751F19AC99C7009F6FDF /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0C39751C19AC99BE009F6FDF /* BUChartViewController.h */,
+				0C39751D19AC99BE009F6FDF /* BUChartViewController.m */,
+				0C39752319ACBDDE009F6FDF /* BUChartListTableViewController.h */,
+				0C39752419ACBDDE009F6FDF /* BUChartListTableViewController.m */,
+				0C39752919ACE16A009F6FDF /* BUChartCell.h */,
+				0C39752A19ACE16A009F6FDF /* BUChartCell.m */,
+				0C32854119AD3B41004A8BBD /* BUItemListViewController.h */,
+				0C32854219AD3B41004A8BBD /* BUItemListViewController.m */,
+				0C32854419AD4840004A8BBD /* BUItemViewController.h */,
+				0C32854519AD4840004A8BBD /* BUItemViewController.m */,
+			);
+			name = "View Controllers";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		0C39752819ACDD68009F6FDF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0C39752619ACDD64009F6FDF /* Montserrat-Bold.ttf */,
+				0C39752719ACDD64009F6FDF /* Montserrat-Regular.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		0C61D9A419AC8E5000623247 = {
 			isa = PBXGroup;
 			children = (
+				0C61D9D919AC965A00623247 /* MainStoryboard.storyboard */,
+				0C61D9D019AC8E6300623247 /* CoreData.framework */,
 				0C61D9AF19AC8E5000623247 /* braindu-coredata */,
 				0C61D9C319AC8E5000623247 /* braindu-coredataTests */,
 				0C61D9AE19AC8E5000623247 /* Products */,
@@ -80,6 +140,8 @@
 				0C61D9B519AC8E5000623247 /* AppDelegate.m */,
 				0C61D9BA19AC8E5000623247 /* Images.xcassets */,
 				0C61D9B719AC8E5000623247 /* braindu_coredata.xcdatamodeld */,
+				0C61D9D819AC959100623247 /* Models */,
+				0C39751F19AC99C7009F6FDF /* View Controllers */,
 				0C61D9B019AC8E5000623247 /* Supporting Files */,
 			);
 			path = "braindu-coredata";
@@ -88,6 +150,7 @@
 		0C61D9B019AC8E5000623247 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0C39752819ACDD68009F6FDF /* Fonts */,
 				0C61D9B119AC8E5000623247 /* Info.plist */,
 				0C61D9B219AC8E5000623247 /* main.m */,
 			);
@@ -109,6 +172,19 @@
 				0C61D9C519AC8E5000623247 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0C61D9D819AC959100623247 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0C61D9D219AC905400623247 /* CoreDataStack.h */,
+				0C61D9D319AC905400623247 /* CoreDataStack.m */,
+				0C32854A19AD4E37004A8BBD /* BUChart.h */,
+				0C32854B19AD4E37004A8BBD /* BUChart.m */,
+				0C39753219AD34E4009F6FDF /* BUItem.h */,
+				0C39753319AD34E4009F6FDF /* BUItem.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C61D9DA19AC965A00623247 /* MainStoryboard.storyboard in Resources */,
 				0C61D9BB19AC8E5000623247 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,9 +285,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C32854319AD3B41004A8BBD /* BUItemListViewController.m in Sources */,
+				0C32854619AD4840004A8BBD /* BUItemViewController.m in Sources */,
 				0C61D9B619AC8E5000623247 /* AppDelegate.m in Sources */,
+				0C39752B19ACE16A009F6FDF /* BUChartCell.m in Sources */,
+				0C39751E19AC99BE009F6FDF /* BUChartViewController.m in Sources */,
+				0C39753419AD34E4009F6FDF /* BUItem.m in Sources */,
 				0C61D9B319AC8E5000623247 /* main.m in Sources */,
 				0C61D9B919AC8E5000623247 /* braindu_coredata.xcdatamodeld in Sources */,
+				0C39752519ACBDDE009F6FDF /* BUChartListTableViewController.m in Sources */,
+				0C32854C19AD4E37004A8BBD /* BUChart.m in Sources */,
+				0C61D9D419AC905400623247 /* CoreDataStack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +471,7 @@
 				0C61D9CC19AC8E5000623247 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C61D9CD19AC8E5000623247 /* Build configuration list for PBXNativeTarget "braindu-coredataTests" */ = {
 			isa = XCConfigurationList;
@@ -394,6 +480,7 @@
 				0C61D9CF19AC8E5000623247 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
