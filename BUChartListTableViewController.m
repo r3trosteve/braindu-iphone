@@ -15,6 +15,7 @@
 @interface BUChartListTableViewController () <NSFetchedResultsControllerDelegate>
 
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, strong) UIView *emptyListView;
 
 @end
 
@@ -39,12 +40,31 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    UIWindow *window = [UIApplication sharedApplication].delegate.window;
+    UIView *emptyListView = [[UIView alloc] init];
+    emptyListView.backgroundColor = [UIColor whiteColor];
+    
+    CGRect rect = self.view.frame;
+    self.emptyListView.frame = CGRectMake(0, 44, rect.size.width, rect.size.height);
+    
+    NSLog(@"Number of sections: %lu", (unsigned long)self.fetchedResultsController.sections.count);
+    if (self.fetchedResultsController.sections.count == 0) {
+        [window addSubview:emptyListView];
+        NSLog(@"added subview");
+    }
+    
+    
     
     UIImage *logo = [UIImage imageNamed:@"Logo.png"];
     UIImageView *imageView = [[UIImageView alloc] initWithImage:logo];
     self.navigationItem.titleView = imageView;
     
     [self.fetchedResultsController performFetch:nil];
+}
+
+- (void)viewWillLayoutSubviews {
+    
+    
 }
 
 - (void)didReceiveMemoryWarning

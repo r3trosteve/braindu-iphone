@@ -10,6 +10,8 @@
 #import "CoreDataStack.h"
 #import "BUChart.h"
 #import "BUItem.h"
+#import "BUItemViewController.h"
+#import "BUItemCell.h"
 
 @interface BUItemListViewController () <NSFetchedResultsControllerDelegate>
 
@@ -38,6 +40,12 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    self.tableView.separatorColor = [UIColor clearColor];
+    
+    self.parentViewController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"chartListBg.png"]];
+    self.tableView.backgroundColor = [UIColor clearColor];
+    self.navigationController.navigationBar.translucent = NO;
+    
     [self.fetchedResultsController performFetch:nil];
 }
 
@@ -65,10 +73,18 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    BUItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    self.tableView.opaque = NO;
+    cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"unselectedCell.png"]];
+    
+    UIView *view = [[UIView alloc] initWithFrame:CGRectZero];
+    view.backgroundColor = [UIColor colorWithRed:.5f green:.5f blue:.5f alpha:.25f];
+    
+    cell.selectedBackgroundView = view;
     
     BUItem *item = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = item.title;
+    [cell configureCellForItem:item];
     
     return cell;
 }

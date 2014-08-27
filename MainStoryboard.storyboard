@@ -69,7 +69,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L7D-Po-C0O" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="QTM-cp-C0U"/>
             </objects>
-            <point key="canvasLocation" x="785" y="602"/>
+            <point key="canvasLocation" x="811" y="581"/>
         </scene>
         <!--Item View Controller-->
         <scene sceneID="msf-6U-M7H">
@@ -90,15 +90,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NZc-lP-V9l">
                                 <rect key="frame" x="0.0" y="65" width="320" height="142"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="def-jg-2fB">
-                                <rect key="frame" x="15" y="85" width="31" height="29"/>
-                                <state key="normal" image="camera-grey">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="imageButtonWasPressed:" destination="bka-iU-Yw4" eventType="touchUpInside" id="jnp-7x-uHN"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PZH-a0-a6v">
                                 <rect key="frame" x="20" y="206" width="280" height="1"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -122,17 +113,37 @@
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L04-IU-uO7">
+                                <rect key="frame" x="9" y="79" width="37" height="35"/>
+                                <state key="normal" image="camera-grey">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="JNL-P1-r3g">
                         <barButtonItem key="leftBarButtonItem" image="back" id="P2a-XL-N2P">
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="cancelWasPressed:" destination="hKK-u7-qtf" id="IA2-7y-FyZ"/>
+                                <segue destination="l44-ZS-mcs" kind="modal" id="91o-rI-tF0"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="checkmark-256" id="hL2-zN-X5J">
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="doneWasPressed:" destination="hKK-u7-qtf" id="mRK-WI-RAD"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addImageLabel" destination="Dpp-jc-rku" id="Mii-dP-1n3"/>
+                        <outlet property="imageButton" destination="L04-IU-uO7" id="86t-Ob-1AP"/>
+                        <outlet property="itemImage" destination="NZc-lP-V9l" id="jsi-OP-47M"/>
+                        <outlet property="noteTextArea" destination="JWL-Bj-v28" id="XBl-Ie-p9M"/>
+                        <outlet property="titleField" destination="MYb-aO-xTG" id="AQD-HG-SXC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DC1-yI-H54" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -147,11 +158,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="60" id="vGV-iR-DUx">
+                            <tableViewCell opaque="NO" alpha="0.5499999999999996" contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="60" id="vGV-iR-DUx" customClass="BUItemCell">
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vGV-iR-DUx" id="hmY-1A-dsw">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.59999999999999998" contentMode="center" tableViewCell="vGV-iR-DUx" id="hmY-1A-dsw">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Item Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ao-Zj-bo5">
+                                            <rect key="frame" x="20" y="20" width="280" height="21"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                                            <color key="textColor" red="0.33725490196078434" green="0.32941176470588235" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </tableViewCellContentView>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="titleLabel" destination="3Ao-Zj-bo5" id="6X7-ha-7Ld"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -169,14 +193,14 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="w1c-GD-ijV">
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="U5q-a4-ce4" kind="modal" identifier="edit" id="FuK-zx-dXo"/>
+                                <segue destination="U5q-a4-ce4" kind="modal" identifier="" id="FuK-zx-dXo"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbM-7g-Y6y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1667" y="790"/>
+            <point key="canvasLocation" x="1667" y="788"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eQR-6d-4J4">
@@ -351,6 +375,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="SSY-xf-1ia"/>
+        <segue reference="z2M-zp-eVf"/>
+        <segue reference="79z-bX-mwA"/>
     </inferredMetricsTieBreakers>
 </document>

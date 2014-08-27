@@ -15,7 +15,7 @@
 
 @property (nonatomic, retain) NSString * body;
 @property (nonatomic, retain) NSData * imageData;
-@property (nonatomic, retain) NSNumber * is_public;
+@property (nonatomic) BOOL is_public;
 @property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) NSSet *items;
 @end

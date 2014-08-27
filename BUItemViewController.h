@@ -14,6 +14,7 @@
 @interface BUItemViewController : UIViewController
 
 @property (strong, nonatomic) BUChart *chart;
+@property (strong, nonatomic) NSSet *items;
 @property (strong, nonatomic) BUItem *item;
 
 @end
