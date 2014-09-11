@@ -17,7 +17,9 @@
 @property (nonatomic, strong) BUPChart *chart;
 @property (nonatomic, strong) NSMutableArray *itemComments;
 
+@property (nonatomic, strong) PFFile *image;
 @property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *note;
 @property (nonatomic, copy) NSNumber *viewCount;
 
 @end

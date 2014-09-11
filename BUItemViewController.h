@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@class BUChart;
-@class BUItem;
+@class BUPChart;
+@class BUPItem;
 
 @interface BUItemViewController : UIViewController
 
-@property (strong, nonatomic) BUChart *chart;
+@property (strong, nonatomic) BUPChart *chart;
 @property (strong, nonatomic) NSSet *items;
-@property (strong, nonatomic) BUItem *item;
+@property (strong, nonatomic) BUPItem *item;
 
 @end

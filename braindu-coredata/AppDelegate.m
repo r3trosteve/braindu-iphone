@@ -30,6 +30,9 @@
     
     [BUPUser enableAutomaticUser];
     
+    // TODO don't do this
+    [[BUPUser currentUser] save];
+    
     PFACL *defaultACL = [PFACL ACL];
     
     // If you would like all objects to be private by default, remove this line.

@@ -76,8 +76,7 @@
     if ([segue.identifier isEqualToString:@"edit"]) {
         UITableViewCell *cell = sender;
         NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-        UINavigationController *navigationController = segue.destinationViewController;
-        BUChartViewController *chartViewController = (BUChartViewController *)navigationController.topViewController;
+        BUChartViewController *chartViewController = (BUChartViewController *)segue.destinationViewController;
         chartViewController.chart = [BUPUser currentUser].charts[indexPath.row];
     } else if ([segue.identifier isEqualToString:@"items"]) {
         UIButton *button = sender;

@@ -7,8 +7,8 @@
 //
 
 #import "BUItemCell.h"
-#import "BUChart.h"
-#import "BUItem.h"
+#import "BUPChart.h"
+#import "BUPItem.h"
 
 @interface BUItemCell ()
 
@@ -43,7 +43,7 @@
     // Configure the view for the selected state
 }
 
-- (void) configureCellForItem:(BUItem *)item {
+- (void) configureCellForItem:(BUPItem *)item {
     self.titleLabel.text = item.title;
     
 }

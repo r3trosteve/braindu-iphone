@@ -22,8 +22,9 @@
     [self registerSubclass];
 }
 
-+ (NSString *)parseClassName {
-    return NSStringFromClass([BUPUser class]);
++ (NSString *)parseClassName
+{
+    return [PFUser parseClassName];
 }
 
 #pragma - Async Relationships

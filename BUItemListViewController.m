@@ -46,6 +46,9 @@
     self.tableView.backgroundColor = [UIColor clearColor];
     self.navigationController.navigationBar.translucent = NO;
 
+    [self.chart ensureItems:^(NSMutableArray *items) {
+        [self.tableView reloadData];
+    }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -70,14 +73,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
-    return self.fetchedResultsController.sections.count;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    return [sectionInfo numberOfObjects];
+    return self.chart.items.count;
 }
 
 
@@ -93,7 +94,7 @@
 
     cell.selectedBackgroundView = view;
 
-    BUItem *item = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    BUPItem *item = self.chart.items[indexPath.row];
     [cell configureCellForItem:item];
 
     return cell;
@@ -113,41 +114,11 @@
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
-        BUItem *item = [self.fetchedResultsController objectAtIndexPath:indexPath];
-        CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
-        [[coreDataStack managedObjectContext] deleteObject:item];
-        [coreDataStack saveContext];
+        BUPItem *item = self.chart.items[indexPath.row];
+        [item deleteInBackground];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }
 }
-
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

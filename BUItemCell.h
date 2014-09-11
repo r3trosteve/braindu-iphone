@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class BUChart;
-@class BUItem;
+@class BUPChart;
+@class BUPItem;
 
 @interface BUItemCell : UITableViewCell
 
-- (void)configureCellForItem:(BUItem *)item;
+- (void)configureCellForItem:(BUPItem *)item;
 
 @end

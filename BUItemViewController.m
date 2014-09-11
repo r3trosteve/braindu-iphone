@@ -9,6 +9,7 @@
 #import "BUItemViewController.h"
 #import "BUPItem.h"
 #import "BUPChart.h"
+#import "BUPUser.h"
 #import "CoreDataStack.h"
 
 @interface BUItemViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate>
@@ -46,17 +47,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 #pragma mark - Core Data actions
 
 -(void)dissmissSelf {
@@ -64,22 +54,37 @@
 }
 
 - (void)insertNewItem {
-    CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
-    BUItem *item = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([BUItem class]) inManagedObjectContext:coreDataStack.managedObjectContext];
+    BUPItem *item = [BUPItem object];
+    item.owner = [BUPUser currentUser];
+    item.chart = self.chart;
     item.title = self.titleField.text;
     item.note = self.noteTextArea.text;
-    item.imageData = UIImageJPEGRepresentation(self.pickedImage, 0.75);
+    
+    NSData *imageData = UIImageJPEGRepresentation(self.pickedImage, 0.75);
+    PFFile *imageFile = [PFFile fileWithData:imageData];
+    item.image = imageFile;
+    
     item.chart = self.chart;
-    [self.chart addItemsObject:item];
-    [coreDataStack saveContext];
+    [imageFile saveInBackground];
+    [item saveInBackground];
+    
+    [self.chart ensureItems:^(NSMutableArray *items) {
+        [items addObject:item];
+        
+        [self dissmissSelf];
+    }];
 }
 
 - (void)updateItem {
     self.item.title = self.titleField.text;
     self.item.note = self.noteTextArea.text;
-    self.item.imageData = UIImageJPEGRepresentation(self.pickedImage, 0.75);
-    CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
-    [coreDataStack saveContext];
+    
+    NSData *imageData = UIImageJPEGRepresentation(self.pickedImage, 0.75);
+    PFFile *imageFile = [PFFile fileWithData:imageData];
+    self.item.image = imageFile;
+    [imageFile saveInBackground];
+    
+    [self.item saveInBackground];
 }
 
 #pragma mark - Image Picker Delegate
@@ -138,11 +143,10 @@
 - (IBAction)doneWasPressed:(id)sender {
     if (self.item != nil) {
         [self updateItem];
+        [self dissmissSelf];
     } else {
         [self insertNewItem];
     }
-    
-    [self dissmissSelf];
 }
 
 - (IBAction)cancelWasPressed:(id)sender {

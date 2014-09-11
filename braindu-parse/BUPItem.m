@@ -14,8 +14,10 @@
 @synthesize itemComments = _itemComments;
 
 @dynamic owner;
+@dynamic image;
 @dynamic chart;
 @dynamic title;
+@dynamic note;
 @dynamic viewCount;
 
 + (void)load {

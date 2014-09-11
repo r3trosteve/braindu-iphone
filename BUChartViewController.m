@@ -93,7 +93,7 @@
     
     NSData *imageData = UIImageJPEGRepresentation(self.pickedImage, 0.75);
     // TODO Change image name
-    PFFile *imageFile = [PFFile fileWithName:@"image.jpg" data:imageData];
+    PFFile *imageFile = [PFFile fileWithData:imageData];
     chart.image = imageFile;
     [imageFile saveInBackground];
     [chart saveInBackground];
@@ -111,7 +111,7 @@
     
     NSData *imageData = UIImageJPEGRepresentation(self.pickedImage, 0.75);
     // TODO Change image name
-    PFFile *imageFile = [PFFile fileWithName:@"image.jpg" data:imageData];
+    PFFile *imageFile = [PFFile fileWithData:imageData];
     self.chart.image = imageFile;
     [imageFile saveInBackground];
     
