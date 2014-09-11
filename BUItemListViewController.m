@@ -33,19 +33,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
-    
+
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
+
     self.tableView.separatorColor = [UIColor clearColor];
-    
+
     self.parentViewController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"chartListBg.png"]];
     self.tableView.backgroundColor = [UIColor clearColor];
     self.navigationController.navigationBar.translucent = NO;
-    
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,6 +54,18 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"add"]) {
+        BUItemViewController *itemView = segue.destinationViewController;
+        itemView.chart = self.chart;
+    } else if ([segue.identifier isEqualToString:@"edit"]) {
+        UITableViewCell *cell = sender;
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+        BUItemViewController *itemViewController = (BUItemViewController *)segue.destinationViewController;
+        itemViewController.item = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    }
+}
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -72,18 +84,18 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     BUItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    
+
     self.tableView.opaque = NO;
     cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"unselectedCell.png"]];
-    
+
     UIView *view = [[UIView alloc] initWithFrame:CGRectZero];
     view.backgroundColor = [UIColor colorWithRed:.5f green:.5f blue:.5f alpha:.25f];
-    
+
     cell.selectedBackgroundView = view;
-    
+
     BUItem *item = [self.fetchedResultsController objectAtIndexPath:indexPath];
     [cell configureCellForItem:item];
-    
+
     return cell;
 }
 
@@ -107,7 +119,7 @@
         [coreDataStack saveContext];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+    }
 }
 
 

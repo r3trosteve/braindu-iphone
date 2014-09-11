@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class BUChart;
 @interface BUItemListViewController : UITableViewController
+
+@property (nonatomic, strong) BUChart *chart;
 
 @end

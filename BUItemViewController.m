@@ -60,15 +60,17 @@
 #pragma mark - Core Data actions
 
 -(void)dissmissSelf {
-    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)insertNewItem {
     CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
-    BUItem *item = [NSEntityDescription insertNewObjectForEntityForName:@"BUItem" inManagedObjectContext:coreDataStack.managedObjectContext];
+    BUItem *item = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([BUItem class]) inManagedObjectContext:coreDataStack.managedObjectContext];
     item.title = self.titleField.text;
     item.note = self.noteTextArea.text;
     item.imageData = UIImageJPEGRepresentation(self.pickedImage, 0.75);
+    item.chart = self.chart;
+    [self.chart addItemsObject:item];
     [coreDataStack saveContext];
 }
 

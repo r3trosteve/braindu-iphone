@@ -12,6 +12,7 @@
 #import "BUChartViewController.h"
 #import "BUChartCell.h"
 #import "BUPUser.h"
+#import "BUItemListViewController.h"
 
 @interface BUChartListTableViewController () <NSFetchedResultsControllerDelegate>
 
@@ -33,36 +34,36 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
-    
+
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
+
     UIWindow *window = [UIApplication sharedApplication].delegate.window;
     UIView *emptyListView = [[UIView alloc] init];
     emptyListView.backgroundColor = [UIColor whiteColor];
-    
+
     CGRect rect = self.view.frame;
     self.emptyListView.frame = CGRectMake(0, 44, rect.size.width, rect.size.height);
-    
+
     UIImage *logo = [UIImage imageNamed:@"Logo.png"];
     UIImageView *imageView = [[UIImageView alloc] initWithImage:logo];
     self.navigationItem.titleView = imageView;
-    
+
     [[BUPUser currentUser] ensureCharts:^(NSMutableArray *charts) {
         if (charts.count == 0) {
             [window addSubview:emptyListView];
         }
-        
+
         [self.tableView reloadData];
     }];
 }
 
 - (void)viewWillLayoutSubviews {
-    
-    
+
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -78,8 +79,14 @@
         UINavigationController *navigationController = segue.destinationViewController;
         BUChartViewController *chartViewController = (BUChartViewController *)navigationController.topViewController;
         chartViewController.chart = [BUPUser currentUser].charts[indexPath.row];
+    } else if ([segue.identifier isEqualToString:@"items"]) {
+        UIButton *button = sender;
+        CGPoint tableViewPoint = [self.tableView convertPoint:button.center fromView:button.superview];
+        NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:tableViewPoint];
+        BUItemListViewController *itemListViewController = (BUItemListViewController *)segue.destinationViewController;
+        itemListViewController.chart = [BUPUser currentUser].charts[indexPath.row];
     }
-    
+
 }
 
 #pragma mark - Table view data source
@@ -98,12 +105,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     BUChartCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    
+
     // Configure the cell...
-    
+
     BUPChart *chart = [BUPUser currentUser].charts[indexPath.row];
     [cell configureCellForChart:chart];
-    
+
     return cell;
 }
 
@@ -120,16 +127,16 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        
+
         // Delete the row from the data source
         //[tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
         BUPChart *chart = [BUPUser currentUser].charts[indexPath.row];
         [chart deleteInBackground];
         [[BUPUser currentUser].charts removeObject:chart];
-        
+
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+    }
 }
 
 
