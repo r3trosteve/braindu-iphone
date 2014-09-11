@@ -7,8 +7,8 @@
 //
 
 #import "BUItemViewController.h"
-#import "BUChart.h"
-#import "BUItem.h"
+#import "BUPItem.h"
+#import "BUPChart.h"
 #import "CoreDataStack.h"
 
 @interface BUItemViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate>

@@ -23,6 +23,44 @@
 		0C61D9DA19AC965A00623247 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C61D9D919AC965A00623247 /* MainStoryboard.storyboard */; };
 		0C9370E719AE182000A99602 /* BUChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9370E619AE182000A99602 /* BUChart.m */; };
 		0C9370EA19AE27D300A99602 /* BUItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9370E919AE27D300A99602 /* BUItemCell.m */; };
+		CA906D6819C171A00084F0E4 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA906D6619C171A00084F0E4 /* Bolts.framework */; };
+		CA906D6919C171A00084F0E4 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA906D6719C171A00084F0E4 /* Parse.framework */; };
+		CA906D7319C171E70084F0E4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA906D6A19C171E70084F0E4 /* AudioToolbox.framework */; };
+		CA906D7419C171E80084F0E4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA906D6B19C171E70084F0E4 /* CFNetwork.framework */; };
+		CA906D7519C171E80084F0E4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA906D6C19C171E70084F0E4 /* CoreGraphics.framework */; };
+		CA906D7619C171E80084F0E4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA906D6D19C171E70084F0E4 /* CoreLocation.framework */; };
+		CA906D7719C171E80084F0E4 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CA906D6E19C171E70084F0E4 /* libz.dylib */; };
+		CA906D7819C171E80084F0E4 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA906D6F19C171E70084F0E4 /* MobileCoreServices.framework */; };
+		CA906D7919C171E80084F0E4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA906D7019C171E70084F0E4 /* QuartzCore.framework */; };
+		CA906D7A19C171E80084F0E4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA906D7119C171E70084F0E4 /* Security.framework */; };
+		CA906D7B19C171E80084F0E4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA906D7219C171E70084F0E4 /* SystemConfiguration.framework */; };
+		CA906D7E19C172650084F0E4 /* BUItemListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C32854219AD3B41004A8BBD /* BUItemListViewController.m */; };
+		CA906D7F19C172650084F0E4 /* BUItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C32854519AD4840004A8BBD /* BUItemViewController.m */; };
+		CA906D8019C172650084F0E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C61D9B519AC8E5000623247 /* AppDelegate.m */; };
+		CA906D8119C172650084F0E4 /* BUChartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C39752A19ACE16A009F6FDF /* BUChartCell.m */; };
+		CA906D8219C172650084F0E4 /* BUChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C39751D19AC99BE009F6FDF /* BUChartViewController.m */; };
+		CA906D8419C172650084F0E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C61D9B219AC8E5000623247 /* main.m */; };
+		CA906D8519C172650084F0E4 /* braindu_coredata.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C61D9B719AC8E5000623247 /* braindu_coredata.xcdatamodeld */; };
+		CA906D8619C172650084F0E4 /* BUChartListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C39752419ACBDDE009F6FDF /* BUChartListTableViewController.m */; };
+		CA906D8719C172650084F0E4 /* BUItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9370E919AE27D300A99602 /* BUItemCell.m */; };
+		CA906D8B19C172650084F0E4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA906D6A19C171E70084F0E4 /* AudioToolbox.framework */; };
+		CA906D8C19C172650084F0E4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA906D6B19C171E70084F0E4 /* CFNetwork.framework */; };
+		CA906D8D19C172650084F0E4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA906D6C19C171E70084F0E4 /* CoreGraphics.framework */; };
+		CA906D8E19C172650084F0E4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA906D6D19C171E70084F0E4 /* CoreLocation.framework */; };
+		CA906D8F19C172650084F0E4 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CA906D6E19C171E70084F0E4 /* libz.dylib */; };
+		CA906D9019C172650084F0E4 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA906D6F19C171E70084F0E4 /* MobileCoreServices.framework */; };
+		CA906D9119C172650084F0E4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA906D7019C171E70084F0E4 /* QuartzCore.framework */; };
+		CA906D9219C172650084F0E4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA906D7119C171E70084F0E4 /* Security.framework */; };
+		CA906D9319C172650084F0E4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA906D7219C171E70084F0E4 /* SystemConfiguration.framework */; };
+		CA906D9419C172650084F0E4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C61D9D019AC8E6300623247 /* CoreData.framework */; };
+		CA906D9519C172650084F0E4 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA906D6719C171A00084F0E4 /* Parse.framework */; };
+		CA906D9619C172650084F0E4 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA906D6619C171A00084F0E4 /* Bolts.framework */; };
+		CA906D9819C172650084F0E4 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C61D9D919AC965A00623247 /* MainStoryboard.storyboard */; };
+		CA906D9919C172650084F0E4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C61D9BA19AC8E5000623247 /* Images.xcassets */; };
+		CA906DA119C173B10084F0E4 /* BUPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = CA906DA019C173B10084F0E4 /* BUPUser.m */; };
+		CA906DA419C1748B0084F0E4 /* BUPChart.m in Sources */ = {isa = PBXBuildFile; fileRef = CA906DA319C1748B0084F0E4 /* BUPChart.m */; };
+		CA906DAA19C174AC0084F0E4 /* BUPItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CA906DA919C174AC0084F0E4 /* BUPItem.m */; };
+		CA906DAD19C174BD0084F0E4 /* BUPItemComment.m in Sources */ = {isa = PBXBuildFile; fileRef = CA906DAC19C174BD0084F0E4 /* BUPItemComment.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +106,27 @@
 		0C9370E619AE182000A99602 /* BUChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUChart.m; sourceTree = "<group>"; };
 		0C9370E819AE27D300A99602 /* BUItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUItemCell.h; sourceTree = "<group>"; };
 		0C9370E919AE27D300A99602 /* BUItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUItemCell.m; sourceTree = "<group>"; };
+		CA906D6619C171A00084F0E4 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		CA906D6719C171A00084F0E4 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		CA906D6A19C171E70084F0E4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		CA906D6B19C171E70084F0E4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		CA906D6C19C171E70084F0E4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CA906D6D19C171E70084F0E4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CA906D6E19C171E70084F0E4 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		CA906D6F19C171E70084F0E4 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		CA906D7019C171E70084F0E4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CA906D7119C171E70084F0E4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		CA906D7219C171E70084F0E4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		CA906D9D19C172650084F0E4 /* braindu-parse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "braindu-parse.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA906D9E19C172650084F0E4 /* braindu-parse-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "braindu-parse-Info.plist"; path = "/Users/hbridges/Coding/Bloc/Steve/braindu-iphone/braindu-parse-Info.plist"; sourceTree = "<absolute>"; };
+		CA906D9F19C173B10084F0E4 /* BUPUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BUPUser.h; path = "braindu-parse/BUPUser.h"; sourceTree = SOURCE_ROOT; };
+		CA906DA019C173B10084F0E4 /* BUPUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BUPUser.m; path = "braindu-parse/BUPUser.m"; sourceTree = SOURCE_ROOT; };
+		CA906DA219C1748B0084F0E4 /* BUPChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BUPChart.h; path = "braindu-parse/BUPChart.h"; sourceTree = SOURCE_ROOT; };
+		CA906DA319C1748B0084F0E4 /* BUPChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BUPChart.m; path = "braindu-parse/BUPChart.m"; sourceTree = SOURCE_ROOT; };
+		CA906DA819C174AC0084F0E4 /* BUPItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BUPItem.h; path = "braindu-parse/BUPItem.h"; sourceTree = SOURCE_ROOT; };
+		CA906DA919C174AC0084F0E4 /* BUPItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BUPItem.m; path = "braindu-parse/BUPItem.m"; sourceTree = SOURCE_ROOT; };
+		CA906DAB19C174BD0084F0E4 /* BUPItemComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BUPItemComment.h; path = "braindu-parse/BUPItemComment.h"; sourceTree = SOURCE_ROOT; };
+		CA906DAC19C174BD0084F0E4 /* BUPItemComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BUPItemComment.m; path = "braindu-parse/BUPItemComment.m"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +134,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA906D7319C171E70084F0E4 /* AudioToolbox.framework in Frameworks */,
+				CA906D7419C171E80084F0E4 /* CFNetwork.framework in Frameworks */,
+				CA906D7519C171E80084F0E4 /* CoreGraphics.framework in Frameworks */,
+				CA906D7619C171E80084F0E4 /* CoreLocation.framework in Frameworks */,
+				CA906D7719C171E80084F0E4 /* libz.dylib in Frameworks */,
+				CA906D7819C171E80084F0E4 /* MobileCoreServices.framework in Frameworks */,
+				CA906D7919C171E80084F0E4 /* QuartzCore.framework in Frameworks */,
+				CA906D7A19C171E80084F0E4 /* Security.framework in Frameworks */,
+				CA906D7B19C171E80084F0E4 /* SystemConfiguration.framework in Frameworks */,
 				0C61D9D119AC8E6300623247 /* CoreData.framework in Frameworks */,
+				CA906D6919C171A00084F0E4 /* Parse.framework in Frameworks */,
+				CA906D6819C171A00084F0E4 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +153,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA906D8A19C172650084F0E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA906D8B19C172650084F0E4 /* AudioToolbox.framework in Frameworks */,
+				CA906D8C19C172650084F0E4 /* CFNetwork.framework in Frameworks */,
+				CA906D8D19C172650084F0E4 /* CoreGraphics.framework in Frameworks */,
+				CA906D8E19C172650084F0E4 /* CoreLocation.framework in Frameworks */,
+				CA906D8F19C172650084F0E4 /* libz.dylib in Frameworks */,
+				CA906D9019C172650084F0E4 /* MobileCoreServices.framework in Frameworks */,
+				CA906D9119C172650084F0E4 /* QuartzCore.framework in Frameworks */,
+				CA906D9219C172650084F0E4 /* Security.framework in Frameworks */,
+				CA906D9319C172650084F0E4 /* SystemConfiguration.framework in Frameworks */,
+				CA906D9419C172650084F0E4 /* CoreData.framework in Frameworks */,
+				CA906D9519C172650084F0E4 /* Parse.framework in Frameworks */,
+				CA906D9619C172650084F0E4 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,8 +211,8 @@
 			isa = PBXGroup;
 			children = (
 				0C61D9D919AC965A00623247 /* MainStoryboard.storyboard */,
-				0C61D9D019AC8E6300623247 /* CoreData.framework */,
-				0C61D9AF19AC8E5000623247 /* braindu-coredata */,
+				CA906D6219C171430084F0E4 /* Frameworks */,
+				0C61D9AF19AC8E5000623247 /* braindu */,
 				0C61D9C319AC8E5000623247 /* braindu-coredataTests */,
 				0C61D9AE19AC8E5000623247 /* Products */,
 			);
@@ -134,11 +223,12 @@
 			children = (
 				0C61D9AD19AC8E5000623247 /* braindu-coredata.app */,
 				0C61D9C019AC8E5000623247 /* braindu-coredataTests.xctest */,
+				CA906D9D19C172650084F0E4 /* braindu-parse.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0C61D9AF19AC8E5000623247 /* braindu-coredata */ = {
+		0C61D9AF19AC8E5000623247 /* braindu */ = {
 			isa = PBXGroup;
 			children = (
 				0C61D9B419AC8E5000623247 /* AppDelegate.h */,
@@ -149,12 +239,14 @@
 				0C39751F19AC99C7009F6FDF /* View Controllers */,
 				0C61D9B019AC8E5000623247 /* Supporting Files */,
 			);
+			name = braindu;
 			path = "braindu-coredata";
 			sourceTree = "<group>";
 		};
 		0C61D9B019AC8E5000623247 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CA906D9E19C172650084F0E4 /* braindu-parse-Info.plist */,
 				0C39752819ACDD68009F6FDF /* Fonts */,
 				0C61D9B119AC8E5000623247 /* Info.plist */,
 				0C61D9B219AC8E5000623247 /* main.m */,
@@ -182,6 +274,34 @@
 		0C61D9D819AC959100623247 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CA906D6519C171870084F0E4 /* Parse */,
+				CA906D6419C171760084F0E4 /* CoreData */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		CA906D6219C171430084F0E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA906D6A19C171E70084F0E4 /* AudioToolbox.framework */,
+				CA906D6B19C171E70084F0E4 /* CFNetwork.framework */,
+				CA906D6C19C171E70084F0E4 /* CoreGraphics.framework */,
+				CA906D6D19C171E70084F0E4 /* CoreLocation.framework */,
+				CA906D6E19C171E70084F0E4 /* libz.dylib */,
+				CA906D6F19C171E70084F0E4 /* MobileCoreServices.framework */,
+				CA906D7019C171E70084F0E4 /* QuartzCore.framework */,
+				CA906D7119C171E70084F0E4 /* Security.framework */,
+				CA906D7219C171E70084F0E4 /* SystemConfiguration.framework */,
+				CA906D6619C171A00084F0E4 /* Bolts.framework */,
+				CA906D6719C171A00084F0E4 /* Parse.framework */,
+				0C61D9D019AC8E6300623247 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA906D6419C171760084F0E4 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
 				0C61D9D219AC905400623247 /* CoreDataStack.h */,
 				0C61D9D319AC905400623247 /* CoreDataStack.m */,
 				0C9370E519AE182000A99602 /* BUChart.h */,
@@ -189,7 +309,22 @@
 				0C39753219AD34E4009F6FDF /* BUItem.h */,
 				0C39753319AD34E4009F6FDF /* BUItem.m */,
 			);
-			name = Models;
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		CA906D6519C171870084F0E4 /* Parse */ = {
+			isa = PBXGroup;
+			children = (
+				CA906D9F19C173B10084F0E4 /* BUPUser.h */,
+				CA906DA019C173B10084F0E4 /* BUPUser.m */,
+				CA906DA219C1748B0084F0E4 /* BUPChart.h */,
+				CA906DA319C1748B0084F0E4 /* BUPChart.m */,
+				CA906DA819C174AC0084F0E4 /* BUPItem.h */,
+				CA906DA919C174AC0084F0E4 /* BUPItem.m */,
+				CA906DAB19C174BD0084F0E4 /* BUPItemComment.h */,
+				CA906DAC19C174BD0084F0E4 /* BUPItemComment.m */,
+			);
+			name = Parse;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +365,23 @@
 			productReference = 0C61D9C019AC8E5000623247 /* braindu-coredataTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		CA906D7C19C172650084F0E4 /* braindu-parse */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA906D9A19C172650084F0E4 /* Build configuration list for PBXNativeTarget "braindu-parse" */;
+			buildPhases = (
+				CA906D7D19C172650084F0E4 /* Sources */,
+				CA906D8A19C172650084F0E4 /* Frameworks */,
+				CA906D9719C172650084F0E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "braindu-parse";
+			productName = "braindu-coredata";
+			productReference = CA906D9D19C172650084F0E4 /* braindu-parse.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -262,6 +414,7 @@
 			targets = (
 				0C61D9AC19AC8E5000623247 /* braindu-coredata */,
 				0C61D9BF19AC8E5000623247 /* braindu-coredataTests */,
+				CA906D7C19C172650084F0E4 /* braindu-parse */,
 			);
 		};
 /* End PBXProject section */
@@ -280,6 +433,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA906D9719C172650084F0E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA906D9819C172650084F0E4 /* MainStoryboard.storyboard in Resources */,
+				CA906D9919C172650084F0E4 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +472,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C61D9C719AC8E5000623247 /* braindu_coredataTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA906D7D19C172650084F0E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA906D7E19C172650084F0E4 /* BUItemListViewController.m in Sources */,
+				CA906D7F19C172650084F0E4 /* BUItemViewController.m in Sources */,
+				CA906D8019C172650084F0E4 /* AppDelegate.m in Sources */,
+				CA906D8119C172650084F0E4 /* BUChartCell.m in Sources */,
+				CA906DA119C173B10084F0E4 /* BUPUser.m in Sources */,
+				CA906D8219C172650084F0E4 /* BUChartViewController.m in Sources */,
+				CA906D8419C172650084F0E4 /* main.m in Sources */,
+				CA906DAD19C174BD0084F0E4 /* BUPItemComment.m in Sources */,
+				CA906DA419C1748B0084F0E4 /* BUPChart.m in Sources */,
+				CA906D8519C172650084F0E4 /* braindu_coredata.xcdatamodeld in Sources */,
+				CA906D8619C172650084F0E4 /* BUChartListTableViewController.m in Sources */,
+				CA906DAA19C174AC0084F0E4 /* BUPItem.m in Sources */,
+				CA906D8719C172650084F0E4 /* BUItemCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +587,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "braindu-coredata/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -416,6 +602,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "braindu-coredata/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -458,6 +648,36 @@
 			};
 			name = Release;
 		};
+		CA906D9B19C172650084F0E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "braindu-parse-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "braindu-parse";
+			};
+			name = Debug;
+		};
+		CA906D9C19C172650084F0E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "braindu-parse-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "braindu-parse";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -484,6 +704,15 @@
 			buildConfigurations = (
 				0C61D9CE19AC8E5000623247 /* Debug */,
 				0C61D9CF19AC8E5000623247 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA906D9A19C172650084F0E4 /* Build configuration list for PBXNativeTarget "braindu-parse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA906D9B19C172650084F0E4 /* Debug */,
+				CA906D9C19C172650084F0E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

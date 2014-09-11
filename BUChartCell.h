@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class BUChart;
+@class BUPChart;
 
 @interface BUChartCell : UITableViewCell
 
-- (void)configureCellForChart:(BUChart *)chart;
+- (void)configureCellForChart:(BUPChart *)chart;
 
 @end

@@ -8,8 +8,8 @@
 
 #import "BUItemListViewController.h"
 #import "CoreDataStack.h"
-#import "BUChart.h"
-#import "BUItem.h"
+#import "BUPItem.h"
+#import "BUPChart.h"
 #import "BUItemViewController.h"
 #import "BUItemCell.h"
 
@@ -46,7 +46,6 @@
     self.tableView.backgroundColor = [UIColor clearColor];
     self.navigationController.navigationBar.translucent = NO;
     
-    [self.fetchedResultsController performFetch:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,7 +65,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][section];
     return [sectionInfo numberOfObjects];
 }
 
@@ -88,59 +86,6 @@
     
     return cell;
 }
-
-- (NSFetchRequest *)itemListFetchRequest {
-    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"BUItem"];
-    
-    fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"title" ascending:YES]];
-    return fetchRequest;
-}
-
-- (NSFetchedResultsController *)fetchedResultsController {
-    if (_fetchedResultsController != nil) {
-        return _fetchedResultsController;
-    }
-    
-    CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
-    NSFetchRequest *fetchRequest = [self itemListFetchRequest];
-    
-    _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:coreDataStack.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
-    
-    // set the delegate for fetchedresultscontroller
-    
-    _fetchedResultsController.delegate = self;
-    
-    return _fetchedResultsController;
-}
-
-
-- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
-    [self.tableView beginUpdates];
-}
-
-- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath {
-    switch (type) {
-        case NSFetchedResultsChangeInsert:[self.tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-            break;
-        case NSFetchedResultsChangeDelete:[self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-            break;
-        case NSFetchedResultsChangeUpdate:[self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-    }
-}
-
-- (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id<NSFetchedResultsSectionInfo>)sectionInfo atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type {
-    switch (type) {
-        case NSFetchedResultsChangeInsert:[self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationAutomatic];
-            break;
-        case NSFetchedResultsChangeDelete:[self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationAutomatic];
-            break;
-    }
-}
-
-- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
-    [self.tableView endUpdates];
-}
-
 
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath

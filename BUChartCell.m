@@ -7,7 +7,7 @@
 //
 
 #import "BUChartCell.h"
-#import "BUChart.h"
+#import "BUPChart.h"
 
 @interface BUChartCell ()
 
@@ -36,13 +36,15 @@
     // Configure the view for the selected state
 }
 
-- (void) configureCellForChart:(BUChart *)chart {
+- (void) configureCellForChart:(BUPChart *)chart {
     self.titleLabel.text = chart.title;
     
-    if (chart.imageData) {
-        self.chartImage.image = [UIImage imageWithData:chart.imageData];
-    } else {
-        self.chartImage.image = [UIImage imageNamed:@"chartPlaceholder"];
+    self.chartImage.image = [UIImage imageNamed:@"chartPlaceholder"];
+    if (chart.image) {
+        [chart.image getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+            UIImage *image = [[UIImage alloc] initWithData:data];
+            self.chartImage.image = image;
+        }];
     }
 }
 

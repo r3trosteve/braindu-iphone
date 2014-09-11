@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class BUChart;
+@class BUPChart;
 
 
 @interface BUChartViewController : UIViewController
 
-@property (strong, nonatomic) BUChart *chart;
+@property (strong, nonatomic) BUPChart *chart;
 
 @end

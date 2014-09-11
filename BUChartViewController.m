@@ -7,8 +7,8 @@
 //
 
 #import "BUChartViewController.h"
-#import "BUChart.h"
-#import "CoreDataStack.h"
+#import "BUPChart.h"
+#import "BUPUser.h"
 
 @interface BUChartViewController () <UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -43,9 +43,12 @@
         self.bodyTextArea.text = self.chart.body;
     }
     
-    if (self.chart.imageData != nil) {
+    if (self.chart.image != nil) {
+        [self.chart.image getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+            UIImage *image = [[UIImage alloc] initWithData:data];
+            self.chartImage.image = image;
+        }];
         
-        self.chartImage.image = [UIImage imageWithData:self.chart.imageData];
         self.titleField.textColor = [UIColor whiteColor];
         self.imageButton.tintColor = [UIColor whiteColor];
         self.imageButton.alpha = 0.2;
@@ -83,21 +86,36 @@
 }
 
 - (void)insertNewChart {
-    CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
-    BUChart *chart = [NSEntityDescription insertNewObjectForEntityForName:@"BUChart" inManagedObjectContext:coreDataStack.managedObjectContext];
+    BUPChart *chart = [BUPChart object];
+    chart.owner = [BUPUser currentUser];
     chart.title = self.titleField.text;
     chart.body = self.bodyTextArea.text;
-    chart.imageData = UIImageJPEGRepresentation(self.pickedImage, 0.75);
-    chart.is_public = YES;
-    [coreDataStack saveContext];
+    
+    NSData *imageData = UIImageJPEGRepresentation(self.pickedImage, 0.75);
+    // TODO Change image name
+    PFFile *imageFile = [PFFile fileWithName:@"image.jpg" data:imageData];
+    chart.image = imageFile;
+    [imageFile saveInBackground];
+    [chart saveInBackground];
+    
+    [[BUPUser currentUser] ensureCharts:^(NSMutableArray *charts) {
+        [charts addObject:chart];
+        
+        [self dissmissSelf];
+    }];
 }
 
 - (void)updateChart {
     self.chart.title = self.titleField.text;
     self.chart.body = self.bodyTextArea.text;
-    self.chart.imageData = UIImageJPEGRepresentation(self.pickedImage, 0.75);
-    CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
-    [coreDataStack saveContext];
+    
+    NSData *imageData = UIImageJPEGRepresentation(self.pickedImage, 0.75);
+    // TODO Change image name
+    PFFile *imageFile = [PFFile fileWithName:@"image.jpg" data:imageData];
+    self.chart.image = imageFile;
+    [imageFile saveInBackground];
+    
+    [self.chart saveInBackground];
 }
 
 - (void)promptForSource {
@@ -154,11 +172,10 @@
 - (IBAction)doneWasPressed:(id)sender {
     if (self.chart != nil) {
         [self updateChart];
+        [self dissmissSelf];
     } else {
         [self insertNewChart];
     }
-    
-    [self dissmissSelf];
 }
 
 - (IBAction)cancelWasPressed:(id)sender {
