@@ -23,6 +23,10 @@
 		0C61D9DA19AC965A00623247 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C61D9D919AC965A00623247 /* MainStoryboard.storyboard */; };
 		0C9370E719AE182000A99602 /* BUChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9370E619AE182000A99602 /* BUChart.m */; };
 		0C9370EA19AE27D300A99602 /* BUItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9370E919AE27D300A99602 /* BUItemCell.m */; };
+		0CE6465919C5AA6D008C125C /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE6465819C5AA6D008C125C /* RegisterViewController.m */; };
+		0CE6465C19C5AA7B008C125C /* SetUsernameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE6465B19C5AA7B008C125C /* SetUsernameViewController.m */; };
+		0CE6465F19C5AA88008C125C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE6465E19C5AA88008C125C /* LoginViewController.m */; };
+		0CE6466219C5AAE2008C125C /* LandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE6466119C5AAE2008C125C /* LandingViewController.m */; };
 		CA906D6819C171A00084F0E4 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA906D6619C171A00084F0E4 /* Bolts.framework */; };
 		CA906D6919C171A00084F0E4 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA906D6719C171A00084F0E4 /* Parse.framework */; };
 		CA906D7319C171E70084F0E4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA906D6A19C171E70084F0E4 /* AudioToolbox.framework */; };
@@ -106,6 +110,14 @@
 		0C9370E619AE182000A99602 /* BUChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUChart.m; sourceTree = "<group>"; };
 		0C9370E819AE27D300A99602 /* BUItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUItemCell.h; sourceTree = "<group>"; };
 		0C9370E919AE27D300A99602 /* BUItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUItemCell.m; sourceTree = "<group>"; };
+		0CE6465719C5AA6D008C125C /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		0CE6465819C5AA6D008C125C /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		0CE6465A19C5AA7B008C125C /* SetUsernameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetUsernameViewController.h; sourceTree = "<group>"; };
+		0CE6465B19C5AA7B008C125C /* SetUsernameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetUsernameViewController.m; sourceTree = "<group>"; };
+		0CE6465D19C5AA88008C125C /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		0CE6465E19C5AA88008C125C /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		0CE6466019C5AAE2008C125C /* LandingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandingViewController.h; sourceTree = "<group>"; };
+		0CE6466119C5AAE2008C125C /* LandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandingViewController.m; sourceTree = "<group>"; };
 		CA906D6619C171A00084F0E4 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		CA906D6719C171A00084F0E4 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		CA906D6A19C171E70084F0E4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -193,6 +205,14 @@
 				0C32854519AD4840004A8BBD /* BUItemViewController.m */,
 				0C9370E819AE27D300A99602 /* BUItemCell.h */,
 				0C9370E919AE27D300A99602 /* BUItemCell.m */,
+				0CE6465719C5AA6D008C125C /* RegisterViewController.h */,
+				0CE6465819C5AA6D008C125C /* RegisterViewController.m */,
+				0CE6465A19C5AA7B008C125C /* SetUsernameViewController.h */,
+				0CE6465B19C5AA7B008C125C /* SetUsernameViewController.m */,
+				0CE6465D19C5AA88008C125C /* LoginViewController.h */,
+				0CE6465E19C5AA88008C125C /* LoginViewController.m */,
+				0CE6466019C5AAE2008C125C /* LandingViewController.h */,
+				0CE6466119C5AAE2008C125C /* LandingViewController.m */,
 			);
 			name = "View Controllers";
 			path = ..;
@@ -480,14 +500,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA906D7E19C172650084F0E4 /* BUItemListViewController.m in Sources */,
+				0CE6465C19C5AA7B008C125C /* SetUsernameViewController.m in Sources */,
 				CA906D7F19C172650084F0E4 /* BUItemViewController.m in Sources */,
 				CA906D8019C172650084F0E4 /* AppDelegate.m in Sources */,
+				0CE6466219C5AAE2008C125C /* LandingViewController.m in Sources */,
 				CA906D8119C172650084F0E4 /* BUChartCell.m in Sources */,
 				CA906DA119C173B10084F0E4 /* BUPUser.m in Sources */,
 				CA906D8219C172650084F0E4 /* BUChartViewController.m in Sources */,
+				0CE6465F19C5AA88008C125C /* LoginViewController.m in Sources */,
 				CA906D8419C172650084F0E4 /* main.m in Sources */,
 				CA906DAD19C174BD0084F0E4 /* BUPItemComment.m in Sources */,
 				CA906DA419C1748B0084F0E4 /* BUPChart.m in Sources */,
+				0CE6465919C5AA6D008C125C /* RegisterViewController.m in Sources */,
 				CA906D8519C172650084F0E4 /* braindu_coredata.xcdatamodeld in Sources */,
 				CA906D8619C172650084F0E4 /* BUChartListTableViewController.m in Sources */,
 				CA906DAA19C174AC0084F0E4 /* BUPItem.m in Sources */,
