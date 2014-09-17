@@ -4,10 +4,102 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
     </dependencies>
     <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="1XO-Yn-C9n">
+            <objects>
+                <viewController id="zsN-6w-e4L" customClass="HomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="veM-bo-NnK"/>
+                        <viewControllerLayoutGuide type="bottom" id="qrn-n0-edp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fZo-Lg-cjr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ogf-KR-Xl8">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <connections>
+                                    <segue destination="55T-im-cHX" kind="embed" id="vyj-HM-4EL"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yBd-CW-d7v">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="92A-ql-R6z">
+                            <rect key="frame" x="96" y="7" width="128" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Me"/>
+                                <segment title="All"/>
+                            </segments>
+                            <connections>
+                                <action selector="segmentValueChanged:" destination="zsN-6w-e4L" eventType="valueChanged" id="Oxu-dg-vOZ"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DTM-pq-mb4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="499" y="569"/>
+        </scene>
+        <!--Switchable Container View Controller-->
+        <scene sceneID="cbY-1f-dbh">
+            <objects>
+                <viewController id="55T-im-cHX" customClass="SwitchableContainerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xey-Y1-WtI"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ize-nc-Blb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Y4V-gd-zi2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JYw-Jf-L2W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="489" y="-69"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="afA-gP-add">
+            <objects>
+                <tableViewController storyboardIdentifier="AllCharts" id="fDt-xz-NkO" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="112" sectionHeaderHeight="22" sectionFooterHeight="22" id="Sh2-LT-jFK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" rowHeight="112" id="hH3-FB-w8i">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hH3-FB-w8i" id="oTj-QU-FxM">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chart 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qmc-DI-kQB">
+                                            <rect key="frame" x="139" y="50" width="57" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fDt-xz-NkO" id="1hp-TU-fj0"/>
+                            <outlet property="delegate" destination="fDt-xz-NkO" id="Yux-re-UUz"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lkG-Ln-NNz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="879" y="-81"/>
+        </scene>
         <!--Chart List Table View Controller-->
         <scene sceneID="cb4-9y-OX0">
             <objects>
-                <tableViewController id="ptf-6y-Z6K" customClass="BUChartListTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MyCharts" id="ptf-6y-Z6K" customClass="BUChartListTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="154" sectionHeaderHeight="22" sectionFooterHeight="22" id="oei-AS-ZOM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,6 +147,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="jdH-St-JBf">
+                        <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" image="hamburger" id="yVL-kH-KtI">
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
@@ -69,7 +162,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L7D-Po-C0O" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="QTM-cp-C0U"/>
             </objects>
-            <point key="canvasLocation" x="811" y="581"/>
+            <point key="canvasLocation" x="879" y="569"/>
         </scene>
         <!--Item View Controller-->
         <scene sceneID="msf-6U-M7H">
@@ -374,23 +467,16 @@
                                 </state>
                                 <connections>
                                     <action selector="login:" destination="6Jc-tB-yd6" eventType="touchUpInside" id="14j-yD-huX"/>
+                                    <segue destination="zsN-6w-e4L" kind="push" identifier="loginSuccessSegueIdentifier" id="HG1-0m-hbX"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="p10-Gv-ddw">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="p10-Gv-ddw">
                                 <rect key="frame" x="280" y="251" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Login" id="MUg-rK-s66">
-                        <barButtonItem key="rightBarButtonItem" image="checkmark-256" id="GhO-te-oFA">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <action selector="login:" destination="6Jc-tB-yd6" id="BuU-De-tTQ"/>
-                                <segue destination="ptf-6y-Z6K" kind="push" identifier="loginSuccessSegueIdentifier" id="kCd-7A-teZ"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Login" id="MUg-rK-s66"/>
                     <connections>
                         <outlet property="activityIndicator" destination="p10-Gv-ddw" id="yA1-b8-3eQ"/>
                         <outlet property="passwordTextField" destination="DoW-rc-FTf" id="QJY-4J-p1A"/>
@@ -515,7 +601,7 @@
                             <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="skip:" destination="u7s-NH-qvZ" id="5Kn-PV-qHI"/>
-                                <segue destination="ptf-6y-Z6K" kind="push" identifier="registerSuccessSegueIdentifier" id="Mkh-4M-R9S"/>
+                                <segue destination="zsN-6w-e4L" kind="push" identifier="registerSuccessSegueIdentifier" id="hX5-SJ-bjB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -544,7 +630,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Mkh-4M-R9S"/>
+        <segue reference="hX5-SJ-bjB"/>
         <segue reference="AEA-co-G9V"/>
         <segue reference="Qag-qd-dL2"/>
     </inferredMetricsTieBreakers>

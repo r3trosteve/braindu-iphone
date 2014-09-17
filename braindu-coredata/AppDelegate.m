@@ -28,16 +28,16 @@
     [Parse setApplicationId:@"74PALysa7pgIR0zupo0fIgtl6NjaVfPg3DgmsJMk"
                   clientKey:@"tnhNR5Feb7vXuOh1h2k4J5BVqtf2ZKIe9fLMDehg"];
     
-    [BUPUser enableAutomaticUser];
+    //[BUPUser enableAutomaticUser];
     
     // TODO don't do this
-    [[BUPUser currentUser] save];
+    // [[BUPUser currentUser] save];
     
     PFACL *defaultACL = [PFACL ACL];
     
     // If you would like all objects to be private by default, remove this line.
     [defaultACL setPublicReadAccess:YES];
-    [defaultACL setPublicWriteAccess:YES];
+    //[defaultACL setPublicWriteAccess:YES];
     
     [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
     
@@ -52,6 +52,7 @@
     
     UINavigationBar *navigationBarAppearance = [UINavigationBar appearance];
     navigationBarAppearance.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor darkGrayColor]};
+    [[UINavigationBar appearance] setTintColor:[UIColor darkGrayColor]];
 }
 
 

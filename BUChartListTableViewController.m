@@ -45,6 +45,7 @@
     UIView *emptyListView = [[UIView alloc] init];
     emptyListView.backgroundColor = [UIColor whiteColor];
 
+
     CGRect rect = self.view.frame;
     self.emptyListView.frame = CGRectMake(0, 44, rect.size.width, rect.size.height);
 
@@ -59,11 +60,6 @@
 
         [self.tableView reloadData];
     }];
-}
-
-- (void)viewWillLayoutSubviews {
-
-
 }
 
 - (void)didReceiveMemoryWarning

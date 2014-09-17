@@ -23,6 +23,8 @@
 		0C61D9DA19AC965A00623247 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C61D9D919AC965A00623247 /* MainStoryboard.storyboard */; };
 		0C9370E719AE182000A99602 /* BUChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9370E619AE182000A99602 /* BUChart.m */; };
 		0C9370EA19AE27D300A99602 /* BUItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9370E919AE27D300A99602 /* BUItemCell.m */; };
+		0CE1B21F19CA2ADE00F28B91 /* SwitchableContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE1B21E19CA2ADE00F28B91 /* SwitchableContainerViewController.m */; };
+		0CE1B22219CA2D8400F28B91 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE1B22119CA2D8400F28B91 /* HomeViewController.m */; };
 		0CE6465919C5AA6D008C125C /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE6465819C5AA6D008C125C /* RegisterViewController.m */; };
 		0CE6465C19C5AA7B008C125C /* SetUsernameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE6465B19C5AA7B008C125C /* SetUsernameViewController.m */; };
 		0CE6465F19C5AA88008C125C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE6465E19C5AA88008C125C /* LoginViewController.m */; };
@@ -110,6 +112,10 @@
 		0C9370E619AE182000A99602 /* BUChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUChart.m; sourceTree = "<group>"; };
 		0C9370E819AE27D300A99602 /* BUItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUItemCell.h; sourceTree = "<group>"; };
 		0C9370E919AE27D300A99602 /* BUItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUItemCell.m; sourceTree = "<group>"; };
+		0CE1B21D19CA2ADD00F28B91 /* SwitchableContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchableContainerViewController.h; sourceTree = "<group>"; };
+		0CE1B21E19CA2ADE00F28B91 /* SwitchableContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchableContainerViewController.m; sourceTree = "<group>"; };
+		0CE1B22019CA2D8400F28B91 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		0CE1B22119CA2D8400F28B91 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		0CE6465719C5AA6D008C125C /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		0CE6465819C5AA6D008C125C /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		0CE6465A19C5AA7B008C125C /* SetUsernameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetUsernameViewController.h; sourceTree = "<group>"; };
@@ -193,8 +199,12 @@
 		0C39751F19AC99C7009F6FDF /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0CE1B22019CA2D8400F28B91 /* HomeViewController.h */,
+				0CE1B22119CA2D8400F28B91 /* HomeViewController.m */,
 				0C39751C19AC99BE009F6FDF /* BUChartViewController.h */,
 				0C39751D19AC99BE009F6FDF /* BUChartViewController.m */,
+				0CE1B21D19CA2ADD00F28B91 /* SwitchableContainerViewController.h */,
+				0CE1B21E19CA2ADE00F28B91 /* SwitchableContainerViewController.m */,
 				0C39752319ACBDDE009F6FDF /* BUChartListTableViewController.h */,
 				0C39752419ACBDDE009F6FDF /* BUChartListTableViewController.m */,
 				0C39752919ACE16A009F6FDF /* BUChartCell.h */,
@@ -477,7 +487,9 @@
 				0C61D9B619AC8E5000623247 /* AppDelegate.m in Sources */,
 				0C39752B19ACE16A009F6FDF /* BUChartCell.m in Sources */,
 				0C39751E19AC99BE009F6FDF /* BUChartViewController.m in Sources */,
+				0CE1B22219CA2D8400F28B91 /* HomeViewController.m in Sources */,
 				0C39753419AD34E4009F6FDF /* BUItem.m in Sources */,
+				0CE1B21F19CA2ADE00F28B91 /* SwitchableContainerViewController.m in Sources */,
 				0C61D9B319AC8E5000623247 /* main.m in Sources */,
 				0C61D9B919AC8E5000623247 /* braindu_coredata.xcdatamodeld in Sources */,
 				0C39752519ACBDDE009F6FDF /* BUChartListTableViewController.m in Sources */,
