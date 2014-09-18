@@ -33,8 +33,10 @@
     CGRect frame = self.view.bounds;
     self.subviewController.view.frame = frame;
     
+    [self.subviewController willMoveToParentViewController:self];
     [self.view addSubview:self.subviewController.view];
     [self addChildViewController:self.subviewController];
+    [self.subviewController didMoveToParentViewController:self];
 }
 
 @end

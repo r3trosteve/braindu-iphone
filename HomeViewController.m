@@ -31,7 +31,6 @@
     // Do any additional setup after loading the view.
     
     self.subviewIdentifiers = @[@"MyCharts", @"AllCharts"];
-    
     [self.switchableContainer loadViewControllerWithIdentifier:self.subviewIdentifiers.firstObject];
 }
 
@@ -47,7 +46,6 @@
     [self.switchableContainer loadViewControllerWithIdentifier:self.subviewIdentifiers[control.selectedSegmentIndex]];
 }
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -55,7 +53,9 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqual:@"EmbedSwitchable"]) {
+        self.switchableContainer = segue.destinationViewController;
+    }
 }
-*/
 
 @end
