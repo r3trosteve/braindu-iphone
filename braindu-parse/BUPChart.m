@@ -27,6 +27,17 @@
     return NSStringFromClass([BUPChart class]);
 }
 
+#pragma mark - Queries
+
++ (void)allCharts:(void (^)(NSMutableArray *items))completion
+{
+    PFQuery *query = [PFQuery queryWithClassName:[BUPChart parseClassName]];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (completion) completion([objects mutableCopy]);
+    }];
+}
+
 #pragma mark - Async Relationships
 
 - (void)ensureItems:(void (^)(NSMutableArray *items))completion

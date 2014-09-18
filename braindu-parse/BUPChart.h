@@ -20,6 +20,7 @@
 @property (nonatomic, copy) NSString *body;
 
 + (NSString *)parseClassName;
++ (void)allCharts:(void (^)(NSMutableArray *items))completion;
 
 - (void)ensureItems:(void (^)(NSMutableArray *items))completion;
 
