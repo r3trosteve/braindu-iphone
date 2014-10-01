@@ -43,6 +43,7 @@
     
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
+    
     [self.window makeKeyAndVisible];
     return YES;
 }

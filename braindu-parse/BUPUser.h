@@ -19,6 +19,8 @@
 
 @property (nonatomic, copy) NSString *displayName;
 
+@property (nonatomic, copy) NSString *location;
+
 + (NSString *)parseClassName;
 
 - (void)ensureCharts:(void (^)(NSMutableArray *charts))completion;

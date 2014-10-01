@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "APAvatarImageView.h"
 #import <Parse/Parse.h>
+#import <CoreLocation/CoreLocation.h>
 
 @class BUPUser;
 @class BUPChart;
@@ -24,5 +25,7 @@
 
 @property (strong, nonatomic) BUPUser *user;
 @property (strong, nonatomic) IBOutlet UITableView *userChartTable;
+
+
 
 @end

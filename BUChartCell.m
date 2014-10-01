@@ -10,6 +10,7 @@
 #import "BUPChart.h"
 #import "APAvatarImageView.h"
 #import "BUPUser.h"
+#import "Defines.h"
 
 @interface BUChartCell ()
 
@@ -28,7 +29,7 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        [self.titleLabel setFont:[UIFont fontWithName:@"Montserrat-Bold" size:24]];
+        [self.titleLabel setFont:CHART_TITLE_FONT];
     }
     return self;
 }

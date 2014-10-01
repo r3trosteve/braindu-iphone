@@ -18,7 +18,7 @@ typedef NS_ENUM(NSInteger, ProfileImagePickerAssociation) {
     ProfileImagePickerAssociationBanner
 };
 
-@interface ProfileViewController () <UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface ProfileViewController () <UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate>
 
 @property (nonatomic, strong) UIImage *pickedImage;
 
@@ -30,6 +30,8 @@ typedef NS_ENUM(NSInteger, ProfileImagePickerAssociation) {
 @property (strong, nonatomic) NSMutableArray *charts;
 
 @property (nonatomic, assign) ProfileImagePickerAssociation pickerAssociation;
+
+@property (strong, nonatomic) CLLocationManager *locationManager;
 
 @end
 
@@ -77,6 +79,12 @@ typedef NS_ENUM(NSInteger, ProfileImagePickerAssociation) {
         self.doneButton.hidden = NO;
     }
     
+    if ([BUPUser currentUser].location == nil) {
+        [self.locationManager requestWhenInUseAuthorization];
+        [self loadLocation];
+        NSLog(@"Get location");
+    }
+    
     
     _userChartTable.delegate = self;
     _userChartTable.dataSource = self;
@@ -93,6 +101,8 @@ typedef NS_ENUM(NSInteger, ProfileImagePickerAssociation) {
     
     [self setUserTotalChartsCountLabel];
     [self setUserTotalItemsCountLabel];
+    
+    self.userLocationLabel.text = self.user.location;
 }
 
 - (void)didReceiveMemoryWarning
@@ -255,6 +265,48 @@ typedef NS_ENUM(NSInteger, ProfileImagePickerAssociation) {
     self.userTotalItemsCountLabel.text = [NSString stringWithFormat:@"%d", itemsCount];
 }
 
+#pragma <#arguments#>
+
+- (void)loadLocation {
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    
+    self.locationManager.desiredAccuracy = 1000;
+    
+    [self.locationManager startUpdatingLocation];
+    
+}
+
+- (void) locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    [self.locationManager stopUpdatingLocation];
+    
+    CLLocation *location = [locations firstObject];
+    NSLog(@"%@", location);
+    CLGeocoder *geoCoder = [[CLGeocoder alloc] init];
+    [geoCoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error) {
+        CLPlacemark *placemark = [placemarks firstObject];
+        NSLog(@"%@", placemark);
+        self.user.location = placemark.name;
+        NSLog(@"%@", self.user.location);
+        [self.user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if (!error) {
+                NSLog(@"User Saved with Location");
+            }
+        }];
+        
+    }];
+}
+
+
+- (void)locationManager:(CLLocationManager *)manager
+       didFailWithError:(NSError *)error
+{
+    NSLog(@"Error while getting core location : %@",[error localizedFailureReason]);
+    if ([error code] == kCLErrorDenied) {
+        //you had denied
+    }
+    [manager stopUpdatingLocation];
+}
 
 /*
 #pragma mark - Navigation

@@ -19,6 +19,7 @@
 @dynamic displayName;
 @dynamic avatar;
 @dynamic banner;
+@dynamic location;
 
 + (void)load {
     [self registerSubclass];

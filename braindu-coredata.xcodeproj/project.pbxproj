@@ -17,6 +17,8 @@
 		0C61D9D119AC8E6300623247 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C61D9D019AC8E6300623247 /* CoreData.framework */; };
 		0C61D9D419AC905400623247 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C61D9D319AC905400623247 /* CoreDataStack.m */; };
 		0C61D9DA19AC965A00623247 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C61D9D919AC965A00623247 /* MainStoryboard.storyboard */; };
+		0C6E6E9419DCA9B5002A0DED /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C39752619ACDD64009F6FDF /* Montserrat-Bold.ttf */; };
+		0C6E6E9519DCA9B9002A0DED /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C39752719ACDD64009F6FDF /* Montserrat-Regular.ttf */; };
 		0C9370E719AE182000A99602 /* BUChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9370E619AE182000A99602 /* BUChart.m */; };
 		0CE1B22519CACC6F00F28B91 /* AllChartsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE1B22419CACC6F00F28B91 /* AllChartsListViewController.m */; };
 		0CE6465919C5AA6D008C125C /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE6465819C5AA6D008C125C /* RegisterViewController.m */; };
@@ -109,6 +111,7 @@
 		0C61D9D219AC905400623247 /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
 		0C61D9D319AC905400623247 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
 		0C61D9D919AC965A00623247 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		0C6E6E9619DCAA17002A0DED /* Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Defines.h; path = ../Defines.h; sourceTree = "<group>"; };
 		0C9370E519AE182000A99602 /* BUChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUChart.h; sourceTree = "<group>"; };
 		0C9370E619AE182000A99602 /* BUChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUChart.m; sourceTree = "<group>"; };
 		0C9370E819AE27D300A99602 /* BUItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUItemCell.h; sourceTree = "<group>"; };
@@ -388,6 +391,7 @@
 				CA906DA919C174AC0084F0E4 /* BUPItem.m */,
 				CA906DAB19C174BD0084F0E4 /* BUPItemComment.h */,
 				CA906DAC19C174BD0084F0E4 /* BUPItemComment.m */,
+				0C6E6E9619DCAA17002A0DED /* Defines.h */,
 			);
 			name = Parse;
 			sourceTree = "<group>";
@@ -505,8 +509,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C6E6E9519DCA9B9002A0DED /* Montserrat-Regular.ttf in Resources */,
 				CA906D9819C172650084F0E4 /* MainStoryboard.storyboard in Resources */,
 				CA906D9919C172650084F0E4 /* Images.xcassets in Resources */,
+				0C6E6E9419DCA9B5002A0DED /* Montserrat-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
