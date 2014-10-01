@@ -7,6 +7,9 @@
 //
 
 #import "HomeViewController.h"
+#import "BUPUser.h"
+#import "BUPChart.h"
+#import "ProfileViewController.h"
 
 @interface HomeViewController ()
 
@@ -55,7 +58,12 @@
     // Pass the selected object to the new view controller.
     if ([segue.identifier isEqual:@"EmbedSwitchable"]) {
         self.switchableContainer = segue.destinationViewController;
+    } else if ([segue.identifier isEqualToString:@"showCurrentUserProfile"]) {
+        ProfileViewController *profileViewController = (ProfileViewController *)segue.destinationViewController;
+        profileViewController.user = [BUPUser currentUser];
     }
 }
+
+
 
 @end

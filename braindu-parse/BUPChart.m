@@ -29,7 +29,7 @@
 
 #pragma mark - Queries
 
-+ (void)allCharts:(void (^)(NSMutableArray *items))completion
++ (void)allCharts:(void (^)(NSMutableArray *charts))completion
 {
     PFQuery *query = [PFQuery queryWithClassName:[BUPChart parseClassName]];
     
@@ -37,6 +37,8 @@
         if (completion) completion([objects mutableCopy]);
     }];
 }
+
+
 
 #pragma mark - Async Relationships
 

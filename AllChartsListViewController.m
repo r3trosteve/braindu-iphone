@@ -1,26 +1,24 @@
 //
-//  BUChartListTableViewController.m
+//  AllChartsListViewController.m
 //  braindu-coredata
 //
-//  Created by Steven Schofield on 26/08/2014.
+//  Created by Steven Schofield on 18/09/2014.
 //  Copyright (c) 2014 Double Digital. All rights reserved.
 //
 
-#import "BUChartListTableViewController.h"
-#import "CoreDataStack.h"
+#import "AllChartsListViewController.h"
 #import "BUPChart.h"
-#import "BUChartViewController.h"
 #import "BUChartCell.h"
-#import "BUPUser.h"
 #import "BUItemListViewController.h"
+#import "ProfileViewController.h"
 
-@interface BUChartListTableViewController () <NSFetchedResultsControllerDelegate>
+@interface AllChartsListViewController ()
 
-@property (nonatomic, strong) UIView *emptyListView;
+@property (strong, nonatomic) NSArray *charts;
 
 @end
 
-@implementation BUChartListTableViewController
+@implementation AllChartsListViewController
 
 - (instancetype)initWithStyle:(UITableViewStyle)style
 {
@@ -34,26 +32,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-
-    UIWindow *window = [UIApplication sharedApplication].delegate.window;
-    UIView *emptyListView = [[UIView alloc] init];
-    emptyListView.backgroundColor = [UIColor whiteColor];
-
-    [[BUPUser currentUser] ensureCharts:^(NSMutableArray *charts) {
-        if (charts.count == 0) {
-            [window addSubview:emptyListView];
-        }
-
+    
+    [BUPChart allCharts:^(NSMutableArray *charts) {
+        self.charts = charts;
         [self.tableView reloadData];
     }];
+      
 }
-
+      
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -61,19 +47,21 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"edit"]) {
-        UITableViewCell *cell = sender;
-        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-        BUChartViewController *chartViewController = (BUChartViewController *)segue.destinationViewController;
-        chartViewController.chart = [BUPUser currentUser].charts[indexPath.row];
-    } else if ([segue.identifier isEqualToString:@"items"]) {
+    if ([segue.identifier isEqualToString:@"items"]) {
         UIButton *button = sender;
         CGPoint tableViewPoint = [self.tableView convertPoint:button.center fromView:button.superview];
         NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:tableViewPoint];
         BUItemListViewController *itemListViewController = (BUItemListViewController *)segue.destinationViewController;
-        itemListViewController.chart = [BUPUser currentUser].charts[indexPath.row];
+        itemListViewController.chart = self.charts[indexPath.row];
+    } else if ([segue.identifier isEqualToString:@"showProfile"]) {
+        UIButton *button = sender;
+        CGPoint tableViewPoint = [self.tableView convertPoint:button.center fromView:button.superview];
+        NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:tableViewPoint];
+        BUPChart *chart = self.charts[indexPath.row];
+        ProfileViewController *profileViewController = (ProfileViewController *)segue.destinationViewController;
+        profileViewController.user = chart.owner;
     }
-
+    
 }
 
 #pragma mark - Table view data source
@@ -86,45 +74,71 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [BUPUser currentUser].charts.count;
+    // Return the number of rows in the section.
+    return self.charts.count;
 }
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     BUChartCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-
+    
     // Configure the cell...
-
-    BUPChart *chart = [BUPUser currentUser].charts[indexPath.row];
+    
+    BUPChart *chart = self.charts[indexPath.row];
     [cell configureCellForChart:chart];
-
+    
     return cell;
 }
 
 
+/*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
+*/
 
-
+/*
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-
         // Delete the row from the data source
-        //[tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-        BUPChart *chart = [BUPUser currentUser].charts[indexPath.row];
-        [chart deleteInBackground];
-        [[BUPUser currentUser].charts removeObject:chart];
-
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }
+    }   
 }
+*/
 
+/*
+// Override to support rearranging the table view.
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+{
+}
+*/
+
+/*
+// Override to support conditional rearranging of the table view.
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Return NO if you do not want the item to be re-orderable.
+    return YES;
+}
+*/
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end

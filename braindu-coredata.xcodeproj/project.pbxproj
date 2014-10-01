@@ -7,13 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C32854319AD3B41004A8BBD /* BUItemListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C32854219AD3B41004A8BBD /* BUItemListViewController.m */; };
-		0C32854619AD4840004A8BBD /* BUItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C32854519AD4840004A8BBD /* BUItemViewController.m */; };
-		0C39751E19AC99BE009F6FDF /* BUChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C39751D19AC99BE009F6FDF /* BUChartViewController.m */; };
-		0C39752519ACBDDE009F6FDF /* BUChartListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C39752419ACBDDE009F6FDF /* BUChartListTableViewController.m */; };
-		0C39752B19ACE16A009F6FDF /* BUChartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C39752A19ACE16A009F6FDF /* BUChartCell.m */; };
 		0C39753419AD34E4009F6FDF /* BUItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C39753319AD34E4009F6FDF /* BUItem.m */; };
-		0C61D9B319AC8E5000623247 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C61D9B219AC8E5000623247 /* main.m */; };
+		0C3E8BBB19D8A4F200C97225 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3E8BBA19D8A4F200C97225 /* ProfileViewController.m */; };
+		0C55344F19D360AA0003597B /* APAvatarImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C55344C19D35E080003597B /* APAvatarImageView.m */; };
 		0C61D9B619AC8E5000623247 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C61D9B519AC8E5000623247 /* AppDelegate.m */; };
 		0C61D9B919AC8E5000623247 /* braindu_coredata.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C61D9B719AC8E5000623247 /* braindu_coredata.xcdatamodeld */; };
 		0C61D9BB19AC8E5000623247 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C61D9BA19AC8E5000623247 /* Images.xcassets */; };
@@ -22,9 +18,7 @@
 		0C61D9D419AC905400623247 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C61D9D319AC905400623247 /* CoreDataStack.m */; };
 		0C61D9DA19AC965A00623247 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C61D9D919AC965A00623247 /* MainStoryboard.storyboard */; };
 		0C9370E719AE182000A99602 /* BUChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9370E619AE182000A99602 /* BUChart.m */; };
-		0C9370EA19AE27D300A99602 /* BUItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9370E919AE27D300A99602 /* BUItemCell.m */; };
-		0CE1B21F19CA2ADE00F28B91 /* SwitchableContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE1B21E19CA2ADE00F28B91 /* SwitchableContainerViewController.m */; };
-		0CE1B22219CA2D8400F28B91 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE1B22119CA2D8400F28B91 /* HomeViewController.m */; };
+		0CE1B22519CACC6F00F28B91 /* AllChartsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE1B22419CACC6F00F28B91 /* AllChartsListViewController.m */; };
 		0CE6465919C5AA6D008C125C /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE6465819C5AA6D008C125C /* RegisterViewController.m */; };
 		0CE6465C19C5AA7B008C125C /* SetUsernameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE6465B19C5AA7B008C125C /* SetUsernameViewController.m */; };
 		0CE6465F19C5AA88008C125C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE6465E19C5AA88008C125C /* LoginViewController.m */; };
@@ -96,6 +90,11 @@
 		0C39752A19ACE16A009F6FDF /* BUChartCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUChartCell.m; sourceTree = "<group>"; };
 		0C39753219AD34E4009F6FDF /* BUItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BUItem.h; path = ../BUItem.h; sourceTree = "<group>"; };
 		0C39753319AD34E4009F6FDF /* BUItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BUItem.m; path = ../BUItem.m; sourceTree = "<group>"; };
+		0C3E8BB919D8A4F200C97225 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		0C3E8BBA19D8A4F200C97225 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		0C55344B19D35E080003597B /* APAvatarImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APAvatarImageView.h; sourceTree = "<group>"; };
+		0C55344C19D35E080003597B /* APAvatarImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APAvatarImageView.m; sourceTree = "<group>"; };
+		0C55345019D36C410003597B /* braindu-coredata-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "braindu-coredata-Bridging-Header.h"; sourceTree = "<group>"; };
 		0C61D9AD19AC8E5000623247 /* braindu-coredata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "braindu-coredata.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C61D9B119AC8E5000623247 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C61D9B219AC8E5000623247 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -118,6 +117,8 @@
 		0CE1B21E19CA2ADE00F28B91 /* SwitchableContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchableContainerViewController.m; sourceTree = "<group>"; };
 		0CE1B22019CA2D8400F28B91 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		0CE1B22119CA2D8400F28B91 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		0CE1B22319CACC6F00F28B91 /* AllChartsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllChartsListViewController.h; sourceTree = "<group>"; };
+		0CE1B22419CACC6F00F28B91 /* AllChartsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllChartsListViewController.m; sourceTree = "<group>"; };
 		0CE6465719C5AA6D008C125C /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		0CE6465819C5AA6D008C125C /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		0CE6465A19C5AA7B008C125C /* SetUsernameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetUsernameViewController.h; sourceTree = "<group>"; };
@@ -209,6 +210,10 @@
 				0CE1B21E19CA2ADE00F28B91 /* SwitchableContainerViewController.m */,
 				0C39752319ACBDDE009F6FDF /* BUChartListTableViewController.h */,
 				0C39752419ACBDDE009F6FDF /* BUChartListTableViewController.m */,
+				0CE1B22319CACC6F00F28B91 /* AllChartsListViewController.h */,
+				0CE1B22419CACC6F00F28B91 /* AllChartsListViewController.m */,
+				0C3E8BB919D8A4F200C97225 /* ProfileViewController.h */,
+				0C3E8BBA19D8A4F200C97225 /* ProfileViewController.m */,
 				0C39752919ACE16A009F6FDF /* BUChartCell.h */,
 				0C39752A19ACE16A009F6FDF /* BUChartCell.m */,
 				0C32854119AD3B41004A8BBD /* BUItemListViewController.h */,
@@ -237,6 +242,33 @@
 				0C39752719ACDD64009F6FDF /* Montserrat-Regular.ttf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		0C55344E19D35E0E0003597B /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				0C55345519D36C5F0003597B /* Timeline */,
+				0C55345419D36C530003597B /* APAvatarImageView */,
+				0C55345019D36C410003597B /* braindu-coredata-Bridging-Header.h */,
+			);
+			name = Libs;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		0C55345419D36C530003597B /* APAvatarImageView */ = {
+			isa = PBXGroup;
+			children = (
+				0C55344B19D35E080003597B /* APAvatarImageView.h */,
+				0C55344C19D35E080003597B /* APAvatarImageView.m */,
+			);
+			name = APAvatarImageView;
+			sourceTree = "<group>";
+		};
+		0C55345519D36C5F0003597B /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Timeline;
 			sourceTree = "<group>";
 		};
 		0C61D9A419AC8E5000623247 = {
@@ -269,6 +301,7 @@
 				0C61D9B719AC8E5000623247 /* braindu_coredata.xcdatamodeld */,
 				0C61D9D819AC959100623247 /* Models */,
 				0C39751F19AC99C7009F6FDF /* View Controllers */,
+				0C55344E19D35E0E0003597B /* Libs */,
 				0C61D9B019AC8E5000623247 /* Supporting Files */,
 			);
 			name = braindu;
@@ -484,18 +517,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C32854319AD3B41004A8BBD /* BUItemListViewController.m in Sources */,
-				0C32854619AD4840004A8BBD /* BUItemViewController.m in Sources */,
 				0C61D9B619AC8E5000623247 /* AppDelegate.m in Sources */,
-				0C39752B19ACE16A009F6FDF /* BUChartCell.m in Sources */,
-				0C39751E19AC99BE009F6FDF /* BUChartViewController.m in Sources */,
-				0CE1B22219CA2D8400F28B91 /* HomeViewController.m in Sources */,
 				0C39753419AD34E4009F6FDF /* BUItem.m in Sources */,
-				0CE1B21F19CA2ADE00F28B91 /* SwitchableContainerViewController.m in Sources */,
-				0C61D9B319AC8E5000623247 /* main.m in Sources */,
 				0C61D9B919AC8E5000623247 /* braindu_coredata.xcdatamodeld in Sources */,
-				0C39752519ACBDDE009F6FDF /* BUChartListTableViewController.m in Sources */,
-				0C9370EA19AE27D300A99602 /* BUItemCell.m in Sources */,
 				0C9370E719AE182000A99602 /* BUChart.m in Sources */,
 				0C61D9D419AC905400623247 /* CoreDataStack.m in Sources */,
 			);
@@ -521,13 +545,16 @@
 				CA906D8119C172650084F0E4 /* BUChartCell.m in Sources */,
 				CA906DA119C173B10084F0E4 /* BUPUser.m in Sources */,
 				CA906D8219C172650084F0E4 /* BUChartViewController.m in Sources */,
+				0C3E8BBB19D8A4F200C97225 /* ProfileViewController.m in Sources */,
 				CA05F46219CAAAFE00C1E826 /* SwitchableContainerViewController.m in Sources */,
 				0CE6465F19C5AA88008C125C /* LoginViewController.m in Sources */,
 				CA906D8419C172650084F0E4 /* main.m in Sources */,
 				CA906DAD19C174BD0084F0E4 /* BUPItemComment.m in Sources */,
 				CA906DA419C1748B0084F0E4 /* BUPChart.m in Sources */,
+				0CE1B22519CACC6F00F28B91 /* AllChartsListViewController.m in Sources */,
 				0CE6465919C5AA6D008C125C /* RegisterViewController.m in Sources */,
 				CA906D8519C172650084F0E4 /* braindu_coredata.xcdatamodeld in Sources */,
+				0C55344F19D360AA0003597B /* APAvatarImageView.m in Sources */,
 				CA906D8619C172650084F0E4 /* BUChartListTableViewController.m in Sources */,
 				CA906DAA19C174AC0084F0E4 /* BUPItem.m in Sources */,
 				CA05F46319CAAB0100C1E826 /* HomeViewController.m in Sources */,
@@ -627,6 +654,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -634,6 +662,8 @@
 				INFOPLIST_FILE = "braindu-coredata/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "braindu-coredata-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -642,6 +672,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -649,6 +680,7 @@
 				INFOPLIST_FILE = "braindu-coredata/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "braindu-coredata-Bridging-Header.h";
 			};
 			name = Release;
 		};

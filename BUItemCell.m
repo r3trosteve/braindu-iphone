@@ -9,6 +9,7 @@
 #import "BUItemCell.h"
 #import "BUPChart.h"
 #import "BUPItem.h"
+#import "APAvatarImageView.h"
 
 @interface BUItemCell ()
 

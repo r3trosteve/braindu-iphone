@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @class BUPChart;
+@class BUPUser;
 
 @interface BUChartCell : UITableViewCell
 

@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "SwitchableContainerViewController.h"
 
+@class BUPUser;
+@class BUPChart;
+
 @interface HomeViewController : UIViewController
 
 @property (nonatomic, weak) SwitchableContainerViewController *switchableContainer;

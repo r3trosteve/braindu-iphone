@@ -10,6 +10,9 @@
 
 @interface BUPUser : PFUser <PFSubclassing>
 
+@property (nonatomic, strong) PFFile *avatar;
+@property (nonatomic, strong) PFFile *banner;
+
 @property (nonatomic, strong) NSMutableArray *charts;
 @property (nonatomic, strong) NSMutableArray *items;
 @property (nonatomic, strong) NSMutableArray *itemComments;

@@ -17,6 +17,8 @@
 @synthesize itemComments = _itemComments;
 
 @dynamic displayName;
+@dynamic avatar;
+@dynamic banner;
 
 + (void)load {
     [self registerSubclass];
