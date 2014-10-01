@@ -48,7 +48,7 @@
     self.chartImage.image = [UIImage imageNamed:@"chartPlaceholder"];
     
     
-    [chart fetchIfNeededInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+    [chart.owner fetchIfNeededInBackgroundWithBlock:^(PFObject *object, NSError *error) {
         if (!error) {
             if (chart.owner.avatar) {
                 PFFile *file = [object objectForKey:@"avatar"];
@@ -85,12 +85,10 @@
     }
 
     
-    self.itemCountLabel.titleLabel.text = @"%d items",[chart.items count];
-    
-    
-    
     
     
 }
+
+
 
 @end

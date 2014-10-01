@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4M1-VZ-sjh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4M1-VZ-sjh">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+            <string>Montserrat-Bold</string>
+            <string>Montserrat-Bold</string>
+            <string>Montserrat-Bold</string>
+            <string>Montserrat-Bold</string>
+        </mutableArray>
+        <mutableArray key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Home View Controller-->
         <scene sceneID="1XO-Yn-C9n">
@@ -27,7 +39,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="yBd-CW-d7v">
                         <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" title="Profile" id="Yem-1k-wcD">
+                        <barButtonItem key="leftBarButtonItem" image="icon-user" id="Yem-1k-wcD">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="stF-5N-Huy" kind="push" identifier="showCurrentUserProfile" id="MuB-XC-zZE"/>
                             </connections>
@@ -138,7 +151,7 @@
                                 <rect key="frame" x="0.0" y="284" width="320" height="284"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="157" id="jrH-Ng-Ipv" customClass="BUChartCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="157" id="jrH-Ng-Ipv" customClass="BUChartCell">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jrH-Ng-Ipv" id="nff-yU-IVT">
@@ -160,6 +173,9 @@
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="qf4-oe-VP5" kind="push" identifier="items" id="HUn-jh-NLd"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -222,7 +238,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="160" id="hH3-FB-w8i" customClass="BUChartCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="160" id="hH3-FB-w8i" customClass="BUChartCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hH3-FB-w8i" id="oTj-QU-FxM">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -243,6 +259,9 @@
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <connections>
+                                                <segue destination="qf4-oe-VP5" kind="push" identifier="items" id="aQc-Et-BVV"/>
+                                            </connections>
                                         </button>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hS0-fo-Frf" customClass="APAvatarImageView">
                                             <rect key="frame" x="5" y="77" width="70" height="70"/>
@@ -273,7 +292,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lkG-Ln-NNz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1840" y="538"/>
+            <point key="canvasLocation" x="1840" y="547"/>
         </scene>
         <!--Chart List Table View Controller-->
         <scene sceneID="cb4-9y-OX0">
@@ -284,7 +303,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="160" id="duC-7b-d7P" customClass="BUChartCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="160" id="duC-7b-d7P" customClass="BUChartCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="duC-7b-d7P" id="rGw-KB-qoe">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -353,7 +372,7 @@
                         <viewControllerLayoutGuide type="bottom" id="UB6-4P-Ado"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="TKg-q6-wd7">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nSs-au-dEf">
@@ -413,18 +432,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DC1-yI-H54" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2604" y="1205"/>
+            <point key="canvasLocation" x="2692" y="845"/>
         </scene>
         <!--Item List View Controller-->
         <scene sceneID="ody-Gd-g0b">
             <objects>
                 <tableViewController id="qf4-oe-VP5" customClass="BUItemListViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" id="rIu-Fm-Fk2">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell opaque="NO" alpha="0.5499999999999996" contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="60" id="vGV-iR-DUx" customClass="BUItemCell">
+                            <tableViewCell opaque="NO" alpha="0.5499999999999996" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="60" id="vGV-iR-DUx" customClass="BUItemCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.59999999999999998" contentMode="center" tableViewCell="vGV-iR-DUx" id="hmY-1A-dsw">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -461,7 +480,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbM-7g-Y6y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2230" y="1205"/>
+            <point key="canvasLocation" x="2243" y="854"/>
         </scene>
         <!--Chart View Controller-->
         <scene sceneID="I9f-as-2le">
@@ -472,7 +491,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Zd1-We-j9K"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="WkH-l3-clQ">
-                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BaG-sr-KSv">
@@ -562,7 +581,7 @@
             </objects>
             <point key="canvasLocation" x="-342" y="1192"/>
         </scene>
-        <!--Landing View Controller - Welcome-->
+        <!--Welcome-->
         <scene sceneID="tar-ex-dXJ">
             <objects>
                 <viewController id="O23-E6-0cD" customClass="LandingViewController" sceneMemberID="viewController">
@@ -611,7 +630,7 @@
             </objects>
             <point key="canvasLocation" x="71" y="1192"/>
         </scene>
-        <!--Login View Controller - Login-->
+        <!--Login-->
         <scene sceneID="wIn-vq-HgI">
             <objects>
                 <viewController id="6Jc-tB-yd6" customClass="LoginViewController" sceneMemberID="viewController">
@@ -636,7 +655,7 @@
                                 <rect key="frame" x="0.0" y="143" width="320" height="77"/>
                                 <color key="backgroundColor" red="0.97254901959999995" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxI-Hc-2IL">
                                 <rect key="frame" x="0.0" y="222" width="320" height="77"/>
@@ -667,7 +686,7 @@
             </objects>
             <point key="canvasLocation" x="477" y="1192"/>
         </scene>
-        <!--Register View Controller - Register-->
+        <!--Register-->
         <scene sceneID="tCq-Xd-jyJ">
             <objects>
                 <viewController id="DeO-Pq-cfk" customClass="RegisterViewController" sceneMemberID="viewController">
@@ -737,7 +756,7 @@
             </objects>
             <point key="canvasLocation" x="477" y="1799"/>
         </scene>
-        <!--Set Username View Controller - Add Email-->
+        <!--Add Email-->
         <scene sceneID="scg-5O-9gN">
             <objects>
                 <viewController id="u7s-NH-qvZ" customClass="SetUsernameViewController" sceneMemberID="viewController">
@@ -819,6 +838,7 @@
         <image name="chartListBg" width="320" height="568"/>
         <image name="checkmark-256" width="19" height="18"/>
         <image name="hamburger" width="26" height="17"/>
+        <image name="icon-user" width="19" height="20"/>
         <image name="landingViewLogo" width="222" height="188"/>
         <image name="lock-256" width="14" height="18"/>
         <image name="steve" width="500" height="745"/>
@@ -830,9 +850,10 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="gvh-jA-xKH"/>
-        <segue reference="bGJ-pE-Q4O"/>
-        <segue reference="Qag-qd-dL2"/>
         <segue reference="HG1-0m-hbX"/>
+        <segue reference="5fR-1K-EgO"/>
+        <segue reference="gvh-jA-xKH"/>
+        <segue reference="aQc-Et-BVV"/>
+        <segue reference="Qag-qd-dL2"/>
     </inferredMetricsTieBreakers>
 </document>

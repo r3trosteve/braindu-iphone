@@ -10,6 +10,7 @@
 #import "BUPUser.h"
 #import "BUPChart.h"
 #import "BUChartCell.h"
+#import "BUItemListViewController.h"
 
 typedef NS_ENUM(NSInteger, ProfileImagePickerAssociation) {
     ProfileImagePickerAssociationNone = 0,
@@ -87,6 +88,13 @@ typedef NS_ENUM(NSInteger, ProfileImagePickerAssociation) {
     
 }
 
+- (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [self setUserTotalChartsCountLabel];
+    [self setUserTotalItemsCountLabel];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -103,6 +111,18 @@ typedef NS_ENUM(NSInteger, ProfileImagePickerAssociation) {
     [self.user saveInBackground];
      */
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"items"]) {
+        UIButton *button = sender;
+        CGPoint tableViewPoint = [self.userChartTable convertPoint:button.center fromView:button.superview];
+        NSIndexPath *indexPath = [self.userChartTable indexPathForRowAtPoint:tableViewPoint];
+        BUItemListViewController *itemListViewController = (BUItemListViewController *)segue.destinationViewController;
+        itemListViewController.chart = self.charts[indexPath.row];
+    }
+}
+
+#pragma mark - ImagePicker Delegates
 
 - (void)promptForSource {
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Image Source" delegate:self cancelButtonTitle:@"cancel" destructiveButtonTitle:nil otherButtonTitles:@"camera", @"photo roll", nil];
@@ -223,6 +243,17 @@ typedef NS_ENUM(NSInteger, ProfileImagePickerAssociation) {
 }
 
 
+#pragma mark - Convenience Methods
+
+- (void) setUserTotalChartsCountLabel {
+    int chartsCount = [self.user.charts count];
+    self.userTotalChartsCountLabel.text = [NSString stringWithFormat:@"%d", chartsCount];
+}
+
+- (void) setUserTotalItemsCountLabel {
+    int itemsCount = [self.user.items count];
+    self.userTotalItemsCountLabel.text = [NSString stringWithFormat:@"%d", itemsCount];
+}
 
 
 /*
