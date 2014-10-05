@@ -20,25 +20,32 @@
 @property (nonatomic, strong) UIImage *pickedImage;
 @property (strong, nonatomic) IBOutlet UILabel *addImageLabel;
 @property (strong, nonatomic) IBOutlet UIButton *imageButton;
+@property (strong, nonatomic) BUPUser *user;
 
 
 @end
 
 @implementation BUItemViewController
 
-- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    if (self.item != nil) {
+        self.titleField.text = self.item.title;
+        self.noteTextArea.text = self.item.note;
+    }
+    
+    if (self.item.image != nil) {
+        [self.item.image getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+            UIImage *image = [[UIImage alloc] initWithData:data];
+            self.itemImage.image = image;
+        }];
+    }
+
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -78,6 +85,7 @@
 - (void)updateItem {
     self.item.title = self.titleField.text;
     self.item.note = self.noteTextArea.text;
+    
     
     NSData *imageData = UIImageJPEGRepresentation(self.pickedImage, 0.75);
     PFFile *imageFile = [PFFile fileWithData:imageData];
@@ -146,6 +154,7 @@
         [self dissmissSelf];
     } else {
         [self insertNewItem];
+        [self dissmissSelf];
     }
 }
 

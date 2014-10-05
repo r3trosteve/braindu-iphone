@@ -8,14 +8,16 @@
 
 #import "BUItemListViewController.h"
 #import "CoreDataStack.h"
+#import "BUPUser.h"
 #import "BUPItem.h"
 #import "BUPChart.h"
 #import "BUItemViewController.h"
+#import "ItemReadViewController.h"
 #import "BUItemCell.h"
 
 @interface BUItemListViewController () <NSFetchedResultsControllerDelegate>
 
-@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+// @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 
 @end
 
@@ -66,9 +68,16 @@
         UITableViewCell *cell = sender;
         NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
         BUItemViewController *itemViewController = (BUItemViewController *)segue.destinationViewController;
-        itemViewController.item = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        itemViewController.item = self.chart.items[indexPath.row];
+    } else if ([segue.identifier isEqualToString:@"read"]) {
+        UITableViewCell *cell = sender;
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+        ItemReadViewController *itemReadViewController = (ItemReadViewController *)segue.destinationViewController;
+        itemReadViewController.item = self.chart.items[indexPath.row];
     }
 }
+
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

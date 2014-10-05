@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+@class BUPUser;
 @class BUPChart;
 @class BUPItem;
 

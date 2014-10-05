@@ -20,6 +20,7 @@
 		0C6E6E9419DCA9B5002A0DED /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C39752619ACDD64009F6FDF /* Montserrat-Bold.ttf */; };
 		0C6E6E9519DCA9B9002A0DED /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C39752719ACDD64009F6FDF /* Montserrat-Regular.ttf */; };
 		0C9370E719AE182000A99602 /* BUChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9370E619AE182000A99602 /* BUChart.m */; };
+		0CB9C0AD19E011C4006A24BC /* ItemReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB9C0AC19E011C4006A24BC /* ItemReadViewController.m */; };
 		0CE1B22519CACC6F00F28B91 /* AllChartsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE1B22419CACC6F00F28B91 /* AllChartsListViewController.m */; };
 		0CE6465919C5AA6D008C125C /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE6465819C5AA6D008C125C /* RegisterViewController.m */; };
 		0CE6465C19C5AA7B008C125C /* SetUsernameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE6465B19C5AA7B008C125C /* SetUsernameViewController.m */; };
@@ -116,6 +117,8 @@
 		0C9370E619AE182000A99602 /* BUChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUChart.m; sourceTree = "<group>"; };
 		0C9370E819AE27D300A99602 /* BUItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUItemCell.h; sourceTree = "<group>"; };
 		0C9370E919AE27D300A99602 /* BUItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUItemCell.m; sourceTree = "<group>"; };
+		0CB9C0AB19E011C4006A24BC /* ItemReadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemReadViewController.h; sourceTree = "<group>"; };
+		0CB9C0AC19E011C4006A24BC /* ItemReadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemReadViewController.m; sourceTree = "<group>"; };
 		0CE1B21D19CA2ADD00F28B91 /* SwitchableContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchableContainerViewController.h; sourceTree = "<group>"; };
 		0CE1B21E19CA2ADE00F28B91 /* SwitchableContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchableContainerViewController.m; sourceTree = "<group>"; };
 		0CE1B22019CA2D8400F28B91 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -205,34 +208,11 @@
 		0C39751F19AC99C7009F6FDF /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0CE1B22019CA2D8400F28B91 /* HomeViewController.h */,
-				0CE1B22119CA2D8400F28B91 /* HomeViewController.m */,
-				0C39751C19AC99BE009F6FDF /* BUChartViewController.h */,
-				0C39751D19AC99BE009F6FDF /* BUChartViewController.m */,
-				0CE1B21D19CA2ADD00F28B91 /* SwitchableContainerViewController.h */,
-				0CE1B21E19CA2ADE00F28B91 /* SwitchableContainerViewController.m */,
-				0C39752319ACBDDE009F6FDF /* BUChartListTableViewController.h */,
-				0C39752419ACBDDE009F6FDF /* BUChartListTableViewController.m */,
-				0CE1B22319CACC6F00F28B91 /* AllChartsListViewController.h */,
-				0CE1B22419CACC6F00F28B91 /* AllChartsListViewController.m */,
-				0C3E8BB919D8A4F200C97225 /* ProfileViewController.h */,
-				0C3E8BBA19D8A4F200C97225 /* ProfileViewController.m */,
-				0C39752919ACE16A009F6FDF /* BUChartCell.h */,
-				0C39752A19ACE16A009F6FDF /* BUChartCell.m */,
-				0C32854119AD3B41004A8BBD /* BUItemListViewController.h */,
-				0C32854219AD3B41004A8BBD /* BUItemListViewController.m */,
-				0C32854419AD4840004A8BBD /* BUItemViewController.h */,
-				0C32854519AD4840004A8BBD /* BUItemViewController.m */,
-				0C9370E819AE27D300A99602 /* BUItemCell.h */,
-				0C9370E919AE27D300A99602 /* BUItemCell.m */,
-				0CE6465719C5AA6D008C125C /* RegisterViewController.h */,
-				0CE6465819C5AA6D008C125C /* RegisterViewController.m */,
-				0CE6465A19C5AA7B008C125C /* SetUsernameViewController.h */,
-				0CE6465B19C5AA7B008C125C /* SetUsernameViewController.m */,
-				0CE6465D19C5AA88008C125C /* LoginViewController.h */,
-				0CE6465E19C5AA88008C125C /* LoginViewController.m */,
-				0CE6466019C5AAE2008C125C /* LandingViewController.h */,
-				0CE6466119C5AAE2008C125C /* LandingViewController.m */,
+				0CB9C0AF19E01216006A24BC /* Profile */,
+				0CB9C0B419E01260006A24BC /* Home */,
+				0CB9C0B019E01229006A24BC /* Charts */,
+				0CB9C0B219E01249006A24BC /* Items */,
+				0CB9C0AE19E011E6006A24BC /* Login Register */,
 			);
 			name = "View Controllers";
 			path = ..;
@@ -346,6 +326,87 @@
 				CA906D6419C171760084F0E4 /* CoreData */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		0CB9C0AE19E011E6006A24BC /* Login Register */ = {
+			isa = PBXGroup;
+			children = (
+				0CE6465719C5AA6D008C125C /* RegisterViewController.h */,
+				0CE6465819C5AA6D008C125C /* RegisterViewController.m */,
+				0CE6465A19C5AA7B008C125C /* SetUsernameViewController.h */,
+				0CE6465B19C5AA7B008C125C /* SetUsernameViewController.m */,
+				0CE6465D19C5AA88008C125C /* LoginViewController.h */,
+				0CE6465E19C5AA88008C125C /* LoginViewController.m */,
+				0CE6466019C5AAE2008C125C /* LandingViewController.h */,
+				0CE6466119C5AAE2008C125C /* LandingViewController.m */,
+			);
+			name = "Login Register";
+			sourceTree = "<group>";
+		};
+		0CB9C0AF19E01216006A24BC /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				0C3E8BB919D8A4F200C97225 /* ProfileViewController.h */,
+				0C3E8BBA19D8A4F200C97225 /* ProfileViewController.m */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		0CB9C0B019E01229006A24BC /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				0CB9C0B119E01239006A24BC /* Views */,
+				0C39752319ACBDDE009F6FDF /* BUChartListTableViewController.h */,
+				0C39752419ACBDDE009F6FDF /* BUChartListTableViewController.m */,
+				0CE1B22319CACC6F00F28B91 /* AllChartsListViewController.h */,
+				0CE1B22419CACC6F00F28B91 /* AllChartsListViewController.m */,
+				0C39751C19AC99BE009F6FDF /* BUChartViewController.h */,
+				0C39751D19AC99BE009F6FDF /* BUChartViewController.m */,
+			);
+			name = Charts;
+			sourceTree = "<group>";
+		};
+		0CB9C0B119E01239006A24BC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0C39752919ACE16A009F6FDF /* BUChartCell.h */,
+				0C39752A19ACE16A009F6FDF /* BUChartCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		0CB9C0B219E01249006A24BC /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				0C32854119AD3B41004A8BBD /* BUItemListViewController.h */,
+				0C32854219AD3B41004A8BBD /* BUItemListViewController.m */,
+				0C32854419AD4840004A8BBD /* BUItemViewController.h */,
+				0C32854519AD4840004A8BBD /* BUItemViewController.m */,
+				0CB9C0AB19E011C4006A24BC /* ItemReadViewController.h */,
+				0CB9C0AC19E011C4006A24BC /* ItemReadViewController.m */,
+				0CB9C0B319E01252006A24BC /* Views */,
+			);
+			name = Items;
+			sourceTree = "<group>";
+		};
+		0CB9C0B319E01252006A24BC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0C9370E819AE27D300A99602 /* BUItemCell.h */,
+				0C9370E919AE27D300A99602 /* BUItemCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		0CB9C0B419E01260006A24BC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0CE1B22019CA2D8400F28B91 /* HomeViewController.h */,
+				0CE1B22119CA2D8400F28B91 /* HomeViewController.m */,
+				0CE1B21D19CA2ADD00F28B91 /* SwitchableContainerViewController.h */,
+				0CE1B21E19CA2ADE00F28B91 /* SwitchableContainerViewController.m */,
+			);
+			name = Home;
 			sourceTree = "<group>";
 		};
 		CA906D6219C171430084F0E4 /* Frameworks */ = {
@@ -546,6 +607,7 @@
 				CA906D7E19C172650084F0E4 /* BUItemListViewController.m in Sources */,
 				0CE6465C19C5AA7B008C125C /* SetUsernameViewController.m in Sources */,
 				CA906D7F19C172650084F0E4 /* BUItemViewController.m in Sources */,
+				0CB9C0AD19E011C4006A24BC /* ItemReadViewController.m in Sources */,
 				CA906D8019C172650084F0E4 /* AppDelegate.m in Sources */,
 				0CE6466219C5AAE2008C125C /* LandingViewController.m in Sources */,
 				CA906D8119C172650084F0E4 /* BUChartCell.m in Sources */,

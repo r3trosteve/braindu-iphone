@@ -80,7 +80,6 @@ typedef NS_ENUM(NSInteger, ProfileImagePickerAssociation) {
     }
     
     if ([BUPUser currentUser].location == nil) {
-        [self.locationManager requestWhenInUseAuthorization];
         [self loadLocation];
         NSLog(@"Get location");
     }
@@ -265,16 +264,27 @@ typedef NS_ENUM(NSInteger, ProfileImagePickerAssociation) {
     self.userTotalItemsCountLabel.text = [NSString stringWithFormat:@"%d", itemsCount];
 }
 
-#pragma <#arguments#>
+#pragma mark - Location
 
 - (void)loadLocation {
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
-    
-    self.locationManager.desiredAccuracy = 1000;
-    
-    [self.locationManager startUpdatingLocation];
-    
+}
+
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
+{
+    if (status == kCLAuthorizationStatusNotDetermined) {
+        
+        [self.locationManager requestWhenInUseAuthorization];
+        
+    } else if (status == kCLAuthorizationStatusAuthorizedWhenInUse) {
+        
+        self.locationManager.desiredAccuracy = 1000;
+        
+        [self.locationManager startUpdatingLocation];
+        
+        
+    }
 }
 
 - (void) locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {

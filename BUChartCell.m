@@ -85,11 +85,10 @@
         }];
     }
 
-    
+    self.itemCountLabel.titleLabel.text = [NSString stringWithFormat:@"%lu items", (unsigned long)[chart.items count]];
     
     
 }
-
 
 
 @end
