@@ -21,6 +21,7 @@
 		0C6E6E9519DCA9B9002A0DED /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C39752719ACDD64009F6FDF /* Montserrat-Regular.ttf */; };
 		0C9370E719AE182000A99602 /* BUChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9370E619AE182000A99602 /* BUChart.m */; };
 		0CB9C0AD19E011C4006A24BC /* ItemReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB9C0AC19E011C4006A24BC /* ItemReadViewController.m */; };
+		0CB9C0C219E1E529006A24BC /* ItemCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB9C0C119E1E529006A24BC /* ItemCommentCell.m */; };
 		0CE1B22519CACC6F00F28B91 /* AllChartsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE1B22419CACC6F00F28B91 /* AllChartsListViewController.m */; };
 		0CE6465919C5AA6D008C125C /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE6465819C5AA6D008C125C /* RegisterViewController.m */; };
 		0CE6465C19C5AA7B008C125C /* SetUsernameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE6465B19C5AA7B008C125C /* SetUsernameViewController.m */; };
@@ -119,6 +120,8 @@
 		0C9370E919AE27D300A99602 /* BUItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUItemCell.m; sourceTree = "<group>"; };
 		0CB9C0AB19E011C4006A24BC /* ItemReadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemReadViewController.h; sourceTree = "<group>"; };
 		0CB9C0AC19E011C4006A24BC /* ItemReadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemReadViewController.m; sourceTree = "<group>"; };
+		0CB9C0C019E1E529006A24BC /* ItemCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemCommentCell.h; sourceTree = "<group>"; };
+		0CB9C0C119E1E529006A24BC /* ItemCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemCommentCell.m; sourceTree = "<group>"; };
 		0CE1B21D19CA2ADD00F28B91 /* SwitchableContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchableContainerViewController.h; sourceTree = "<group>"; };
 		0CE1B21E19CA2ADE00F28B91 /* SwitchableContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchableContainerViewController.m; sourceTree = "<group>"; };
 		0CE1B22019CA2D8400F28B91 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -394,6 +397,8 @@
 			children = (
 				0C9370E819AE27D300A99602 /* BUItemCell.h */,
 				0C9370E919AE27D300A99602 /* BUItemCell.m */,
+				0CB9C0C019E1E529006A24BC /* ItemCommentCell.h */,
+				0CB9C0C119E1E529006A24BC /* ItemCommentCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -618,6 +623,7 @@
 				0CE6465F19C5AA88008C125C /* LoginViewController.m in Sources */,
 				CA906D8419C172650084F0E4 /* main.m in Sources */,
 				CA906DAD19C174BD0084F0E4 /* BUPItemComment.m in Sources */,
+				0CB9C0C219E1E529006A24BC /* ItemCommentCell.m in Sources */,
 				CA906DA419C1748B0084F0E4 /* BUPChart.m in Sources */,
 				0CE1B22519CACC6F00F28B91 /* AllChartsListViewController.m in Sources */,
 				0CE6465919C5AA6D008C125C /* RegisterViewController.m in Sources */,

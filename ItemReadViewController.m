@@ -10,6 +10,7 @@
 #import "BUPUser.h"
 #import "BUPItem.h"
 #import "BUPItemComment.h"
+#import "ItemCommentCell.h"
 
 
 @interface ItemReadViewController ()
@@ -34,6 +35,11 @@
             self.itemImageView.image = image;
         }];
     }
+    
+    [self.item ensureItemComments:^(NSMutableArray *itemComments) {
+        [self.commentsTableView reloadData];
+    }];
+    
     
     NSNotificationCenter * notificationCenter = [NSNotificationCenter defaultCenter];
     [notificationCenter addObserver:self
@@ -66,6 +72,23 @@
     _scrollView.contentSize = CGSizeMake(width, scrollViewHeight);
     
 }
+
+- (void)insertNewItemComment {
+    
+    BUPItemComment *itemComment = [BUPItemComment object];
+    itemComment.owner = [BUPUser currentUser];
+    itemComment.text = self.commentTextField.text;
+    itemComment.item = self.item;
+    
+    [itemComment saveInBackground];
+    
+    [self.item ensureItemComments:^(NSMutableArray *itemComments) {
+        self.commentTextField.text = @"";
+        [itemComments addObject:itemComment];
+        [self.commentsTableView reloadData];
+    }];
+}
+
 /*
 #pragma mark - Navigation
 
@@ -82,12 +105,16 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    return self.item.itemComments.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    ItemCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
+    
+    BUPItemComment *itemComment = self.item.itemComments[indexPath.row];
+    [cell configureCellForItemComment:itemComment];
+
     return cell;
 }
 
@@ -117,6 +144,9 @@
 }
 
 - (BOOL) textFieldShouldReturn:(UITextField *)textField {
+    
+    [self insertNewItemComment];
+    
     [textField resignFirstResponder];
     
     return NO;

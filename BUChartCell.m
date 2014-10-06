@@ -49,6 +49,7 @@
     self.chartImage.image = [UIImage imageNamed:@"chartPlaceholder"];
     
     
+    
     [chart.owner fetchIfNeededInBackgroundWithBlock:^(PFObject *object, NSError *error) {
         if (!error) {
             if (chart.owner.avatar) {
@@ -86,6 +87,12 @@
     }
 
     self.itemCountLabel.titleLabel.text = [NSString stringWithFormat:@"%lu items", (unsigned long)[chart.items count]];
+    
+//    UIVisualEffectView *blurView = [[UIVisualEffectView alloc] initWithEffect:UIBlurEffectStyleExtraLight];
+//    blurView.frame = self.bounds;
+//    blurView.alpha = 1;
+//    [self addSubview:blurView ];
+//    [self bringSubviewToFront:blurView];
     
     
 }

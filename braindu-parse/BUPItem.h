@@ -22,4 +22,6 @@
 @property (nonatomic, copy) NSString *note;
 @property (nonatomic, copy) NSNumber *viewCount;
 
+- (void)ensureItemComments:(void (^)(NSMutableArray *itemComments))completion;
+
 @end

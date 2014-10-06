@@ -15,7 +15,7 @@
 #import "ItemReadViewController.h"
 #import "BUItemCell.h"
 
-@interface BUItemListViewController () <NSFetchedResultsControllerDelegate>
+@interface BUItemListViewController ()
 
 // @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 
@@ -74,6 +74,7 @@
         NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
         ItemReadViewController *itemReadViewController = (ItemReadViewController *)segue.destinationViewController;
         itemReadViewController.item = self.chart.items[indexPath.row];
+        
     }
 }
 
