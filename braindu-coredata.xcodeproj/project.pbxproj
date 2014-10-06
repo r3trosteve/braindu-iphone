@@ -10,7 +10,6 @@
 		0C39753419AD34E4009F6FDF /* BUItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C39753319AD34E4009F6FDF /* BUItem.m */; };
 		0C3E8BBB19D8A4F200C97225 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3E8BBA19D8A4F200C97225 /* ProfileViewController.m */; };
 		0C55344F19D360AA0003597B /* APAvatarImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C55344C19D35E080003597B /* APAvatarImageView.m */; };
-		0C61D9B619AC8E5000623247 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C61D9B519AC8E5000623247 /* AppDelegate.m */; };
 		0C61D9B919AC8E5000623247 /* braindu_coredata.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C61D9B719AC8E5000623247 /* braindu_coredata.xcdatamodeld */; };
 		0C61D9BB19AC8E5000623247 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C61D9BA19AC8E5000623247 /* Images.xcassets */; };
 		0C61D9C719AC8E5000623247 /* braindu_coredataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C61D9C619AC8E5000623247 /* braindu_coredataTests.m */; };
@@ -148,7 +147,7 @@
 		CA906D7119C171E70084F0E4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		CA906D7219C171E70084F0E4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CA906D9D19C172650084F0E4 /* braindu-parse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "braindu-parse.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA906D9E19C172650084F0E4 /* braindu-parse-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "braindu-parse-Info.plist"; path = "/Users/hbridges/Coding/Bloc/Steve/braindu-iphone/braindu-parse-Info.plist"; sourceTree = "<absolute>"; };
+		CA906D9E19C172650084F0E4 /* braindu-parse-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "braindu-parse-Info.plist"; sourceTree = SOURCE_ROOT; };
 		CA906D9F19C173B10084F0E4 /* BUPUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BUPUser.h; path = "braindu-parse/BUPUser.h"; sourceTree = SOURCE_ROOT; };
 		CA906DA019C173B10084F0E4 /* BUPUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BUPUser.m; path = "braindu-parse/BUPUser.m"; sourceTree = SOURCE_ROOT; };
 		CA906DA219C1748B0084F0E4 /* BUPChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BUPChart.h; path = "braindu-parse/BUPChart.h"; sourceTree = SOURCE_ROOT; };
@@ -589,7 +588,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C61D9B619AC8E5000623247 /* AppDelegate.m in Sources */,
 				0C39753419AD34E4009F6FDF /* BUItem.m in Sources */,
 				0C61D9B919AC8E5000623247 /* braindu_coredata.xcdatamodeld in Sources */,
 				0C9370E719AE182000A99602 /* BUChart.m in Sources */,

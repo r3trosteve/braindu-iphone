@@ -163,6 +163,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="chartImage" destination="rtK-lo-Wf6" id="9T6-gU-skJ"/>
+                                            <outlet property="itemCountLabel" destination="54j-ek-0i0" id="1K5-0T-57E"/>
                                             <outlet property="titleLabel" destination="PDF-rb-2rA" id="YvD-9u-aCP"/>
                                         </connections>
                                     </tableViewCell>
@@ -267,6 +268,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="chartImage" destination="ZQt-zj-ics" id="0m9-vs-YAF"/>
+                                    <outlet property="itemCountLabel" destination="c0X-E9-JOE" id="1s7-pM-H0b"/>
                                     <outlet property="titleLabel" destination="BAI-uA-lVe" id="hGy-1c-gCb"/>
                                     <outlet property="userAvatar" destination="hS0-fo-Frf" id="59E-5h-O9v"/>
                                 </connections>
@@ -958,9 +960,9 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="HG1-0m-hbX"/>
         <segue reference="5fR-1K-EgO"/>
-        <segue reference="gvh-jA-xKH"/>
+        <segue reference="HG1-0m-hbX"/>
+        <segue reference="MuB-XC-zZE"/>
         <segue reference="HUn-jh-NLd"/>
         <segue reference="Qag-qd-dL2"/>
     </inferredMetricsTieBreakers>

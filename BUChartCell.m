@@ -20,7 +20,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *chartImage;
 @property (weak, nonatomic) IBOutlet APAvatarImageView *userAvatar;
 
-
 @end
 
 @implementation BUChartCell
@@ -86,8 +85,9 @@
         }];
     }
 
-    self.itemCountLabel.titleLabel.text = [NSString stringWithFormat:@"%lu items", (unsigned long)[chart.items count]];
-    
+    [chart ensureItems:^(NSMutableArray *items) {
+        [self.itemCountLabel setTitle:[NSString stringWithFormat:@"%lu items", chart.items.count] forState:UIControlStateNormal];
+    }];
 //    UIVisualEffectView *blurView = [[UIVisualEffectView alloc] initWithEffect:UIBlurEffectStyleExtraLight];
 //    blurView.frame = self.bounds;
 //    blurView.alpha = 1;
