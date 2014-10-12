@@ -9,10 +9,12 @@
 #import <Parse/PFObject+Subclass.h>
 #import "BUPItem.h"
 #import "BUPItemComment.h"
+#import "BUPItemVote.h"
 
 @implementation BUPItem
 
 @synthesize itemComments = _itemComments;
+@synthesize itemVotes = _itemVotes;
 
 @dynamic owner;
 @dynamic image;
@@ -20,6 +22,7 @@
 @dynamic title;
 @dynamic note;
 @dynamic viewCount;
+@dynamic voteCount;
 
 + (void)load {
     [self registerSubclass];
@@ -48,6 +51,26 @@
             if (completion) completion(sSelf.itemComments);
         }];
     }
+}
+
+- (void)ensureItemVotes:(void (^)(NSMutableArray *itemVotes))completion
+{
+    if (_itemVotes) {
+        if (completion) completion(_itemVotes);
+    } else {
+        PFQuery *query = [PFQuery queryWithClassName:[BUPItemVote parseClassName]];
+        [query whereKey:NSStringFromSelector(@selector(item)) equalTo:self];
+        
+        __weak typeof(self) wSelf = self;
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            __strong typeof(self) sSelf = wSelf;
+            sSelf.itemVotes = [NSMutableArray array];
+            [sSelf.itemVotes addObjectsFromArray:objects];
+            
+            if (completion) completion(sSelf.itemVotes);
+        }];
+    }
+
 }
 
 

@@ -49,7 +49,7 @@
     } else {
         PFQuery *query = [PFQuery queryWithClassName:[BUPItem parseClassName]];
         [query whereKey:NSStringFromSelector(@selector(chart)) equalTo:self];
-        
+        [query orderBySortDescriptor:[NSSortDescriptor sortDescriptorWithKey:@"voteCount" ascending:NO]];
         __weak typeof(self) wSelf = self;
         [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             __strong typeof(self) sSelf = wSelf;

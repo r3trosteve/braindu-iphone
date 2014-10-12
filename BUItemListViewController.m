@@ -48,6 +48,12 @@
     self.tableView.backgroundColor = [UIColor clearColor];
     self.navigationController.navigationBar.translucent = NO;
 
+//    [self.chart ensureItems:^(NSMutableArray *items) {
+//        [self.tableView reloadData];
+//    }];
+}
+
+- (void) viewWillAppear:(BOOL)animated {
     [self.chart ensureItems:^(NSMutableArray *items) {
         [self.tableView reloadData];
     }];

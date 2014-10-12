@@ -16,12 +16,15 @@
 @property (nonatomic, strong) BUPUser *owner;
 @property (nonatomic, strong) BUPChart *chart;
 @property (nonatomic, strong) NSMutableArray *itemComments;
+@property (nonatomic, strong) NSMutableArray *itemVotes;
 
 @property (nonatomic, strong) PFFile *image;
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *note;
 @property (nonatomic, copy) NSNumber *viewCount;
+@property (nonatomic, copy) NSNumber *voteCount;
 
 - (void)ensureItemComments:(void (^)(NSMutableArray *itemComments))completion;
+- (void)ensureItemVotes:(void (^)(NSMutableArray *itemVotes))completion;
 
 @end

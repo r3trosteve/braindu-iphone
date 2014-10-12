@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C135FB419EB23F10006D122 /* BUPItemVote.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C135FB319EB23F10006D122 /* BUPItemVote.m */; };
 		0C39753419AD34E4009F6FDF /* BUItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C39753319AD34E4009F6FDF /* BUItem.m */; };
 		0C3E8BBB19D8A4F200C97225 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3E8BBA19D8A4F200C97225 /* ProfileViewController.m */; };
 		0C55344F19D360AA0003597B /* APAvatarImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C55344C19D35E080003597B /* APAvatarImageView.m */; };
@@ -79,6 +80,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C135FB219EB23F10006D122 /* BUPItemVote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUPItemVote.h; sourceTree = "<group>"; };
+		0C135FB319EB23F10006D122 /* BUPItemVote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUPItemVote.m; sourceTree = "<group>"; };
 		0C32854119AD3B41004A8BBD /* BUItemListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUItemListViewController.h; sourceTree = "<group>"; };
 		0C32854219AD3B41004A8BBD /* BUItemListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUItemListViewController.m; sourceTree = "<group>"; };
 		0C32854419AD4840004A8BBD /* BUItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUItemViewController.h; sourceTree = "<group>"; };
@@ -456,6 +459,8 @@
 				CA906DA919C174AC0084F0E4 /* BUPItem.m */,
 				CA906DAB19C174BD0084F0E4 /* BUPItemComment.h */,
 				CA906DAC19C174BD0084F0E4 /* BUPItemComment.m */,
+				0C135FB219EB23F10006D122 /* BUPItemVote.h */,
+				0C135FB319EB23F10006D122 /* BUPItemVote.m */,
 				0C6E6E9619DCAA17002A0DED /* Defines.h */,
 			);
 			name = Parse;
@@ -619,6 +624,7 @@
 				0C3E8BBB19D8A4F200C97225 /* ProfileViewController.m in Sources */,
 				CA05F46219CAAAFE00C1E826 /* SwitchableContainerViewController.m in Sources */,
 				0CE6465F19C5AA88008C125C /* LoginViewController.m in Sources */,
+				0C135FB419EB23F10006D122 /* BUPItemVote.m in Sources */,
 				CA906D8419C172650084F0E4 /* main.m in Sources */,
 				CA906DAD19C174BD0084F0E4 /* BUPItemComment.m in Sources */,
 				0CB9C0C219E1E529006A24BC /* ItemCommentCell.m in Sources */,

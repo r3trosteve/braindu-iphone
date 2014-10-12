@@ -25,5 +25,8 @@
 @property (strong, nonatomic) IBOutlet UITextField *commentTextField;
 @property (strong, nonatomic) IBOutlet UITableView *commentsTableView;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIButton *voteButton;
+
+- (IBAction)voteWasPressed:(id)sender;
 
 @end

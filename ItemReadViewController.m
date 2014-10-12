@@ -10,10 +10,13 @@
 #import "BUPUser.h"
 #import "BUPItem.h"
 #import "BUPItemComment.h"
+#import "BUPItemVote.h"
 #import "ItemCommentCell.h"
 
 
 @interface ItemReadViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel *voteCountLabel;
 
 @end
 
@@ -51,8 +54,29 @@
                                name:UIKeyboardWillHideNotification
                              object:nil];
     
+    
     _commentsTableView.delegate = self;
     _commentsTableView.dataSource = self;
+    
+    
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    self.voteCountLabel.text = [NSString stringWithFormat:@"%@ Votes", self.item.voteCount];
+    
+    BUPUser *user = [BUPUser currentUser];
+    PFRelation *relation = [user relationForKey:@"votes"];
+    [[relation query] findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            NSLog(@"Items voted: %@", objects);
+            for (BUPItem *item in objects) {
+                if([item.objectId isEqualToString:self.item.objectId]){
+                    [self.voteButton setSelected:YES];
+                    break;
+                }
+            }
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -87,6 +111,31 @@
         [itemComments addObject:itemComment];
         [self.commentsTableView reloadData];
     }];
+}
+
+- (void)insertNewItemVote {
+    BUPUser *user = [BUPUser currentUser];
+    PFRelation *relation = [user relationForKey:@"votes"];
+    [relation addObject:self.item];
+    [user saveInBackground];
+
+}
+
+- (void)removeItemVote {
+    BUPUser *user = [BUPUser currentUser];
+    PFRelation *relation = [user relationForKey:@"votes"];
+    [relation removeObject:self.item];
+    [user saveInBackground];
+}
+
+- (void)incrementVotesCountForItem {
+    [self.item incrementKey:@"voteCount" byAmount:[NSNumber numberWithInt:1]];
+    [self.item saveInBackground];
+}
+
+- (void)decrementVotesCountForItem {
+    [self.item incrementKey:@"voteCount" byAmount:[NSNumber numberWithInt:-1]];
+    [self.item saveInBackground];
 }
 
 /*
@@ -151,5 +200,24 @@
     
     return NO;
 }
+
+- (IBAction)voteWasPressed:(id)sender {
+    
+    if (!self.voteButton.isSelected) {
+        [self incrementVotesCountForItem];
+        [self insertNewItemVote];
+        [self.voteButton setSelected:YES];
+        self.voteCountLabel.text = [NSString stringWithFormat:@"%@ Votes", self.item.voteCount];
+        
+    } else if (self.voteButton.isSelected) {
+        [self decrementVotesCountForItem];
+        [self removeItemVote];
+        [self.voteButton setSelected:NO];
+        self.voteCountLabel.text = [NSString stringWithFormat:@"%@ Votes", self.item.voteCount];
+    }
+    
+}
+
+
 
 @end
