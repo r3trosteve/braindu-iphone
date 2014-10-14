@@ -17,6 +17,7 @@
 @property (nonatomic, strong) BUPChart *chart;
 @property (nonatomic, strong) NSMutableArray *itemComments;
 @property (nonatomic, strong) NSMutableArray *itemVotes;
+@property (nonatomic, strong) NSMutableDictionary *userLikes;
 
 @property (nonatomic, strong) PFFile *image;
 @property (nonatomic, copy) NSString *title;
@@ -26,5 +27,9 @@
 
 - (void)ensureItemComments:(void (^)(NSMutableArray *itemComments))completion;
 - (void)ensureItemVotes:(void (^)(NSMutableArray *itemVotes))completion;
+
+- (void)voteWithUser:(BUPUser *)user withCompletionBlock:(void (^)(NSError *error))completion;
+- (void)unvoteWithUser:(BUPUser *)user withCompletionBlock:(void (^)(NSError *error))completion;
+- (void)testUser:(BUPUser *)user votesForItem:(void (^)(BOOL userLikesItem, NSError *error))completion;
 
 @end
