@@ -6,9 +6,8 @@
 //  Copyright (c) 2014 Double Digital. All rights reserved.
 //
 
+#import <BrainduDataModel/BrainduDataModel.h>
 #import "BUChartViewController.h"
-#import "BUPChart.h"
-#import "BUPUser.h"
 
 @interface BUChartViewController () <UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 

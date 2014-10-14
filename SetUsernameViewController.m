@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Double Digital. All rights reserved.
 //
 
+#import <BrainduDataModel/BrainduDataModel.h>
 #import "SetUsernameViewController.h"
-#import <Parse/Parse.h>
 
 @interface SetUsernameViewController ()
 
@@ -72,7 +72,7 @@
         
         [activityIndicator startAnimating];
         
-        PFUser *user = [PFUser currentUser];
+        BUPUser *user = [BUPUser currentUser];
         user.email = email;
         
         [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {

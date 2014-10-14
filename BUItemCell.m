@@ -6,9 +6,8 @@
 //  Copyright (c) 2014 Double Digital. All rights reserved.
 //
 
+#import <BrainduDataModel/BrainduDataModel.h>
 #import "BUItemCell.h"
-#import "BUPChart.h"
-#import "BUPItem.h"
 #import "APAvatarImageView.h"
 
 @interface BUItemCell ()

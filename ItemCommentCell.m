@@ -6,11 +6,8 @@
 //  Copyright (c) 2014 Double Digital. All rights reserved.
 //
 
+#import <BrainduDataModel/BrainduDataModel.h>
 #import "ItemCommentCell.h"
-#import "BUPChart.h"
-#import "BUPItem.h"
-#import "BUPItemComment.h"
-#import "BUPUser.h"
 
 @implementation ItemCommentCell
 

@@ -18,6 +18,9 @@
 		0C61D9DA19AC965A00623247 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C61D9D919AC965A00623247 /* MainStoryboard.storyboard */; };
 		0C6E6E9419DCA9B5002A0DED /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C39752619ACDD64009F6FDF /* Montserrat-Bold.ttf */; };
 		0C6E6E9519DCA9B9002A0DED /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C39752719ACDD64009F6FDF /* Montserrat-Regular.ttf */; };
+		0C7900BF19ECF4A0008CE4B6 /* BrainduDataModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7900BA19ECF44E008CE4B6 /* BrainduDataModel.framework */; };
+		0C7900C319ECF876008CE4B6 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7900C119ECF876008CE4B6 /* Bolts.framework */; };
+		0C7900C419ECF876008CE4B6 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7900C219ECF876008CE4B6 /* Parse.framework */; };
 		0C9370E719AE182000A99602 /* BUChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9370E619AE182000A99602 /* BUChart.m */; };
 		0CB9C0AD19E011C4006A24BC /* ItemReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB9C0AC19E011C4006A24BC /* ItemReadViewController.m */; };
 		0CB9C0C219E1E529006A24BC /* ItemCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB9C0C119E1E529006A24BC /* ItemCommentCell.m */; };
@@ -68,6 +71,27 @@
 			remoteGlobalIDString = 0C61D9AC19AC8E5000623247;
 			remoteInfo = "braindu-coredata";
 		};
+		0C7900B919ECF44E008CE4B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C7900B419ECF44E008CE4B6 /* BrainduDataModel.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0C79007819ECEB80008CE4B6;
+			remoteInfo = BrainduDataModel;
+		};
+		0C7900BB19ECF44E008CE4B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C7900B419ECF44E008CE4B6 /* BrainduDataModel.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0C79008319ECEB80008CE4B6;
+			remoteInfo = BrainduDataModelTests;
+		};
+		0C7900BD19ECF48E008CE4B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C7900B419ECF44E008CE4B6 /* BrainduDataModel.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C79007719ECEB80008CE4B6;
+			remoteInfo = BrainduDataModel;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +129,9 @@
 		0C61D9D319AC905400623247 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
 		0C61D9D919AC965A00623247 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		0C6E6E9619DCAA17002A0DED /* Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Defines.h; path = ../Defines.h; sourceTree = "<group>"; };
+		0C7900B419ECF44E008CE4B6 /* BrainduDataModel.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BrainduDataModel.xcodeproj; path = submodules/BrainduDataModel/BrainduDataModel.xcodeproj; sourceTree = "<group>"; };
+		0C7900C119ECF876008CE4B6 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = submodules/BrainduDataModel/BrainduDataModel/Bolts.framework; sourceTree = "<group>"; };
+		0C7900C219ECF876008CE4B6 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = submodules/BrainduDataModel/BrainduDataModel/Parse.framework; sourceTree = "<group>"; };
 		0C9370E519AE182000A99602 /* BUChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUChart.h; sourceTree = "<group>"; };
 		0C9370E619AE182000A99602 /* BUChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUChart.m; sourceTree = "<group>"; };
 		0C9370E819AE27D300A99602 /* BUItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUItemCell.h; sourceTree = "<group>"; };
@@ -169,6 +196,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C7900BF19ECF4A0008CE4B6 /* BrainduDataModel.framework in Frameworks */,
 				CA906D8B19C172650084F0E4 /* AudioToolbox.framework in Frameworks */,
 				CA906D8C19C172650084F0E4 /* CFNetwork.framework in Frameworks */,
 				CA906D8D19C172650084F0E4 /* CoreGraphics.framework in Frameworks */,
@@ -178,6 +206,8 @@
 				CA906D9119C172650084F0E4 /* QuartzCore.framework in Frameworks */,
 				CA906D9219C172650084F0E4 /* Security.framework in Frameworks */,
 				CA906D9319C172650084F0E4 /* SystemConfiguration.framework in Frameworks */,
+				0C7900C319ECF876008CE4B6 /* Bolts.framework in Frameworks */,
+				0C7900C419ECF876008CE4B6 /* Parse.framework in Frameworks */,
 				CA906D9419C172650084F0E4 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,6 +267,7 @@
 		0C61D9A419AC8E5000623247 = {
 			isa = PBXGroup;
 			children = (
+				0C7900B419ECF44E008CE4B6 /* BrainduDataModel.xcodeproj */,
 				0C61D9D919AC965A00623247 /* MainStoryboard.storyboard */,
 				CA906D6219C171430084F0E4 /* Frameworks */,
 				0C61D9AF19AC8E5000623247 /* braindu */,
@@ -307,6 +338,15 @@
 				CA906D6419C171760084F0E4 /* CoreData */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		0C7900B519ECF44E008CE4B6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0C7900BA19ECF44E008CE4B6 /* BrainduDataModel.framework */,
+				0C7900BC19ECF44E008CE4B6 /* BrainduDataModelTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		0CB9C0AE19E011E6006A24BC /* Login Register */ = {
@@ -395,6 +435,8 @@
 		CA906D6219C171430084F0E4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C7900C119ECF876008CE4B6 /* Bolts.framework */,
+				0C7900C219ECF876008CE4B6 /* Parse.framework */,
 				CA906D6A19C171E70084F0E4 /* AudioToolbox.framework */,
 				CA906D6B19C171E70084F0E4 /* CFNetwork.framework */,
 				CA906D6C19C171E70084F0E4 /* CoreGraphics.framework */,
@@ -478,6 +520,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				0C7900BE19ECF48E008CE4B6 /* PBXTargetDependency */,
 			);
 			name = "braindu-parse";
 			productName = "braindu-coredata";
@@ -512,6 +555,12 @@
 			mainGroup = 0C61D9A419AC8E5000623247;
 			productRefGroup = 0C61D9AE19AC8E5000623247 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0C7900B519ECF44E008CE4B6 /* Products */;
+					ProjectRef = 0C7900B419ECF44E008CE4B6 /* BrainduDataModel.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				0C61D9AC19AC8E5000623247 /* braindu-coredata */,
@@ -520,6 +569,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		0C7900BA19ECF44E008CE4B6 /* BrainduDataModel.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = BrainduDataModel.framework;
+			remoteRef = 0C7900B919ECF44E008CE4B6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0C7900BC19ECF44E008CE4B6 /* BrainduDataModelTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = BrainduDataModelTests.xctest;
+			remoteRef = 0C7900BB19ECF44E008CE4B6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0C61D9AB19AC8E5000623247 /* Resources */ = {
@@ -605,6 +671,11 @@
 			isa = PBXTargetDependency;
 			target = 0C61D9AC19AC8E5000623247 /* braindu-coredata */;
 			targetProxy = 0C61D9C119AC8E5000623247 /* PBXContainerItemProxy */;
+		};
+		0C7900BE19ECF48E008CE4B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BrainduDataModel;
+			targetProxy = 0C7900BD19ECF48E008CE4B6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -761,9 +832,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/submodules/BrainduDataModel/BrainduDataModel",
 				);
 				INFOPLIST_FILE = "braindu-parse-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -776,9 +849,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/submodules/BrainduDataModel/BrainduDataModel",
 				);
 				INFOPLIST_FILE = "braindu-parse-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

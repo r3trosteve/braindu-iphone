@@ -6,12 +6,11 @@
 //  Copyright (c) 2014 Double Digital. All rights reserved.
 //
 
+#import <BrainduDataModel/BrainduDataModel.h>
 #import "BUChartListTableViewController.h"
 #import "CoreDataStack.h"
-#import "BUPChart.h"
 #import "BUChartViewController.h"
 #import "BUChartCell.h"
-#import "BUPUser.h"
 #import "BUItemListViewController.h"
 
 @interface BUChartListTableViewController () <NSFetchedResultsControllerDelegate>

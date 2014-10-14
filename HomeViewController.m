@@ -6,9 +6,8 @@
 //  Copyright (c) 2014 Double Digital. All rights reserved.
 //
 
+#import <BrainduDataModel/BrainduDataModel.h>
 #import "HomeViewController.h"
-#import "BUPUser.h"
-#import "BUPChart.h"
 #import "ProfileViewController.h"
 
 @interface HomeViewController ()

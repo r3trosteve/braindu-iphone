@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Double Digital. All rights reserved.
 //
 
+#import <BrainduDataModel/BrainduDataModel.h>
 #import "AllChartsListViewController.h"
-#import "BUPChart.h"
 #import "BUChartCell.h"
 #import "BUItemListViewController.h"
 #import "ProfileViewController.h"

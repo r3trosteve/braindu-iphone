@@ -6,10 +6,9 @@
 //  Copyright (c) 2014 Double Digital. All rights reserved.
 //
 
+#import <BrainduDataModel/BrainduDataModel.h>
 #import "BUChartCell.h"
-#import "BUPChart.h"
 #import "APAvatarImageView.h"
-#import "BUPUser.h"
 #import "Defines.h"
 
 @interface BUChartCell ()

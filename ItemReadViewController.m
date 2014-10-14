@@ -6,11 +6,8 @@
 //  Copyright (c) 2014 Double Digital. All rights reserved.
 //
 
+#import <BrainduDataModel/BrainduDataModel.h>
 #import "ItemReadViewController.h"
-#import "BUPUser.h"
-#import "BUPItem.h"
-#import "BUPItemComment.h"
-#import "BUPItemVote.h"
 #import "ItemCommentCell.h"
 
 

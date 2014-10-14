@@ -6,9 +6,7 @@
 //  Copyright (c) 2014 Double Digital. All rights reserved.
 //
 
-#import <Parse/Parse.h>
-//#import <BrainduDataModel/BrainduDataModel.h>
-#import "BUPUser.h"
+#import <BrainduDataModel/BrainduDataModel.h>
 #import "AppDelegate.h"
 
 static NSString * const kParseAppId = @"74PALysa7pgIR0zupo0fIgtl6NjaVfPg3DgmsJMk";
@@ -28,9 +26,7 @@ static NSString * const kParseClientKey = @"tnhNR5Feb7vXuOh1h2k4J5BVqtf2ZKIe9fLM
     
     [self setupAppearance];
     
-    
-    
-    
+    [BUPDataModel configureWithParseAppID:kParseAppId clientKey:kParseClientKey launchOptions:launchOptions];
     
     [self.window makeKeyAndVisible];
     return YES;

@@ -6,11 +6,10 @@
 //  Copyright (c) 2014 Double Digital. All rights reserved.
 //
 
+#import <BrainduDataModel/BrainduDataModel.h>
 #import "BUItemListViewController.h"
 #import "CoreDataStack.h"
-#import "BUPUser.h"
-#import "BUPItem.h"
-#import "BUPChart.h"
+
 #import "BUItemViewController.h"
 #import "ItemReadViewController.h"
 #import "BUItemCell.h"
