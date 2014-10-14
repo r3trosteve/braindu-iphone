@@ -7,9 +7,12 @@
 //
 
 #import <Parse/Parse.h>
+//#import <BrainduDataModel/BrainduDataModel.h>
 #import "BUPUser.h"
 #import "AppDelegate.h"
 
+static NSString * const kParseAppId = @"74PALysa7pgIR0zupo0fIgtl6NjaVfPg3DgmsJMk";
+static NSString * const kParseClientKey = @"tnhNR5Feb7vXuOh1h2k4J5BVqtf2ZKIe9fLMDehg";
 @interface AppDelegate ()
             
 
@@ -25,23 +28,8 @@
     
     [self setupAppearance];
     
-    [Parse setApplicationId:@"74PALysa7pgIR0zupo0fIgtl6NjaVfPg3DgmsJMk"
-                  clientKey:@"tnhNR5Feb7vXuOh1h2k4J5BVqtf2ZKIe9fLMDehg"];
     
-    //[BUPUser enableAutomaticUser];
     
-    // TODO don't do this
-    // [[BUPUser currentUser] save];
-    
-    PFACL *defaultACL = [PFACL ACL];
-    
-    // If you would like all objects to be private by default, remove this line.
-    [defaultACL setPublicReadAccess:YES];
-    //[defaultACL setPublicWriteAccess:YES];
-    
-    [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
-    
-    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     
     [self.window makeKeyAndVisible];

@@ -1,0 +1,3 @@
+[submodule "submodules/BrainduDataModel"]
+	path = submodules/BrainduDataModel
+	url = https://github.com/r3trosteve/BrainduDataModel.git
